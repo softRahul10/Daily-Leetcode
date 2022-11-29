@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeetCode - Questions</title>
+    <title>Soft_rahul - Java LeetCode Questions and Solutions Collection </title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +36,10 @@
             <div class="leetcode-questions">
                 <!-- Question Module -->
                 <div class="leetcode">
+                    <!-- time -->
+                    <div class="leetcode-time">
+                        <i class="fa-solid fa-clock"></i> <span class="time">28/11/2022</span>
+                    </div>
                     <!-- title -->
                     <div class="leetcode-title">
                         <h3>Q1. Swap Nodes In Linked List </h3>
@@ -68,90 +77,52 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- testing -->
-                <!-- Question Module -->
-                <div class="leetcode">
-                    <!-- title -->
-                    <div class="leetcode-title">
-                        <h3>Q1. Swap Nodes In Linked List </h3>
-                        <button class="leetcode-level easy">Easy</button>
-                    </div>
-                    <!-- body -->
-                    <div class="leetcode-body">
-                        <!-- Show/Hide -->
-                        <div class="leetcode-dialog">
-                            <h4>Solution</h4>
-                            <button id="show-hide" class="functionality">Show</button>
-                        </div>
-                        <!-- content -->
-                        <div class="leetcode-body-content" id="hidden" style="display:none;">
-                            <div class="leetcode-solution">
-                                <pre>
-                                Node swapPairs(Node head) {
-                                    Node dummy = new Node(0);
-                                    Node curr = head;
-                                    Node prev = dummy;
-
-                                    while(curr!=null && curr.next != null) {
-                                        Node next;
-                                        prev.next = curr.next;
-                                        next = curr.next.next;
-                                        curr.next.next = curr;
-                                        prev = curr;
-                                        curr = next;
-                                    }
-                                    prev.next = curr;
-                                    return dummy.next;
-                                }
-                            </pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question Module -->
-                <div class="leetcode">
-                    <!-- title -->
-                    <div class="leetcode-title">
-                        <h3>Q1. Swap Nodes In Linked List </h3>
-                        <button class="leetcode-level hard">Hard</button>
-                    </div>
-                    <!-- body -->
-                    <div class="leetcode-body">
-                        <!-- Show/Hide -->
-                        <div class="leetcode-dialog">
-                            <h4>Solution</h4>
-                            <button id="show-hide" class="functionality">Show</button>
-                        </div>
-                        <!-- content -->
-                        <div class="leetcode-body-content" id="hidden" style="display:none;">
-                            <div class="leetcode-solution">
-                                <pre>
-                                Node swapPairs(Node head) {
-                                    Node dummy = new Node(0);
-                                    Node curr = head;
-                                    Node prev = dummy;
-
-                                    while(curr!=null && curr.next != null) {
-                                        Node next;
-                                        prev.next = curr.next;
-                                        next = curr.next.next;
-                                        curr.next.next = curr;
-                                        prev = curr;
-                                        curr = next;
-                                    }
-                                    prev.next = curr;
-                                    return dummy.next;
-                                }
-                            </pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- testing -->
             </div>
+
+            <!-- new Question -->
+            <div class="leetcode">
+                <!-- 29/11/2022 -->
+                <!-- Javascript DOM -->
+                <div class="leetcode-time">
+                    <i class="fa-solid fa-clock"></i> <span class="time">29/11/2022</span>
+                </div>
+                <div class="leetcode-title">
+                    <h3>Q2. Detect Cycle in Linked List </h3>
+                    <button class="leetcode-level easy">Easy</button>
+                </div>
+                <div class="leetcode-body">
+                    <!-- Show/Hide -->
+                    <div class="leetcode-dialog">
+                        <h4>Solution</h4>
+                        <button id="show-hide" class="functionality">Show</button>
+                    </div>
+                    <div class="leetcode-body-content" id="hidden" style="display:none;">
+                        <div class="leetcode-solution">
+                            <pre>
+                                      // Detect Cycle in linked List
+                                      public static boolean findCycle(Node head) {
+                                        // Here, I can use 
+                                        // Fast and Slow Pointer Pattern
+
+                                        Node fast = head;
+                                        Node slow = head;
+
+                                        while(fast != null && fast.next != null) {
+                                            fast = fast.next.next;
+                                            slow = slow.next;
+                                            if(fast == slow) {
+                                                return true; // Detect Cycle in Linked list
+                                            }
+                                        }
+
+                                        return false;
+                                      }                           
+                                </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -176,6 +147,46 @@
                 }
             });
         });
+
+
+        // Creating new Questions
+        function createQuestionUI() {
+            const time = new Date().toLocaleDateString();
+            const container = document.querySelector(".leetcode-questions");
+            const numberOfQuestion = container.childElementCount + 1;
+            const questionTitle = prompt("Enter Question:");
+            const qLevel = prompt("Level:");
+            const sol = prompt("Solution:");
+
+            // DOM Element Creation 
+            const questionUI = document.createElement("div");
+            questionUI.classList.add("leetcode");
+            questionUI.innerHTML = `
+            <!-- ${time} -->
+            <!-- Javascript DOM -->
+                    <div class="leetcode-time">
+                    <i class="fa-solid fa-clock"></i> <span class="time">${time}</span>
+                    </div>
+                    <div class="leetcode-title">
+                        <h3>Q${numberOfQuestion}. ${questionTitle} </h3>
+                        <button class="leetcode-level ${qLevel.toLowerCase()}">${qLevel}</button>
+                    </div>
+                    <div class="leetcode-body">
+                        <!-- Show/Hide -->
+                        <div class="leetcode-dialog">
+                            <h4>Solution</h4>
+                            <button id="show-hide" class="functionality">Show</button>
+                        </div>
+                        <div class="leetcode-body-content" id="hidden" style="display:none;">
+                            <div class="leetcode-solution">
+                                <pre>
+                               ${sol}
+                            </pre>
+                            </div>
+                        </div>
+                    </div>`;
+            container.append(questionUI);
+        }
     </script>
 </body>
 

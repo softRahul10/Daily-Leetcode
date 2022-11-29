@@ -72,6 +72,7 @@ button {
     font-weight: 600;
     color: #fff;
     min-width: 65px;
+    text-transform: capitalize;
 }
 
 .easy {
@@ -121,8 +122,15 @@ button {
 
 .leetcode-solution pre {
     white-space: pre-line;
+    overflow: auto;
 }
 
+
+/* Leetcode Time */
+.leetcode-time{
+    font-size: 105%;
+    margin: 0.2rem 0.4rem;
+}
 
 
 @media screen and (min-width:1000px) {
