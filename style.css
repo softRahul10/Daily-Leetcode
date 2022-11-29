@@ -26,6 +26,8 @@ button {
     color: #fff;
     text-align: center;
     padding: 1rem 0.5rem;
+    position: sticky;
+    top: 0;
 }
 
 .uni-header h1 {
