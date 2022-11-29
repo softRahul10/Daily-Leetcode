@@ -77,28 +77,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- new Question -->
-            <div class="leetcode">
-                <!-- 29/11/2022 -->
-                <!-- Javascript DOM -->
-                <div class="leetcode-time">
-                    <i class="fa-solid fa-clock"></i> <span class="time">29/11/2022</span>
-                </div>
-                <div class="leetcode-title">
-                    <h3>Q2. Detect Cycle in Linked List </h3>
-                    <button class="leetcode-level easy">Easy</button>
-                </div>
-                <div class="leetcode-body">
-                    <!-- Show/Hide -->
-                    <div class="leetcode-dialog">
-                        <h4>Solution</h4>
-                        <button id="show-hide" class="functionality">Show</button>
+                <!-- new Question -->
+                <div class="leetcode">
+                    <!-- 29/11/2022 -->
+                    <!-- Javascript DOM -->
+                    <div class="leetcode-time">
+                        <i class="fa-solid fa-clock"></i> <span class="time">29/11/2022</span>
                     </div>
-                    <div class="leetcode-body-content" id="hidden" style="display:none;">
-                        <div class="leetcode-solution">
-                            <pre>
+                    <div class="leetcode-title">
+                        <h3>Q2. Detect Cycle in Linked List </h3>
+                        <button class="leetcode-level easy">Easy</button>
+                    </div>
+                    <div class="leetcode-body">
+                        <!-- Show/Hide -->
+                        <div class="leetcode-dialog">
+                            <h4>Solution</h4>
+                            <button id="show-hide" class="functionality">Show</button>
+                        </div>
+                        <div class="leetcode-body-content" id="hidden" style="display:none;">
+                            <div class="leetcode-solution">
+                                <pre>
                                       // Detect Cycle in linked List
 
                                       public static boolean findCycle(Node head) {
@@ -122,10 +120,76 @@
                                         return false;
                                       }                           
                                 </pre>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="leetcode">
+                    <!-- 29/11/2022 -->
+                    <!-- Javascript DOM -->
+                            <div class="leetcode-time">
+                            <i class="fa-solid fa-clock"></i> <span class="time">29/11/2022</span>
+                            </div>
+                            <div class="leetcode-title">
+                                <h3>Q3. Odd and Even Linked List </h3>
+                                <button class="leetcode-level medium">Medium</button>
+                            </div>
+                            <div class="leetcode-body">
+                                <!-- Show/Hide -->
+                                <div class="leetcode-dialog">
+                                    <h4>Solution</h4>
+                                    <button id="show-hide" class="functionality">Show</button>
+                                </div>
+                                <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                    <div class="leetcode-solution-media">
+                                        <img src="./tinified/pic.jpg" alt="">
+                                        <img src="./tinified/pic2.jpg" alt="">
+                                    </div>
+                                    <div class="leetcode-solution">
+
+                                     <pre>
+                                        // Odd Even Linked List
+                                        
+                                        public static Node oddEvenList(Node head) {
+
+                                            if(head == null) return null;
+
+                                            Node odd = head;
+                                            Node even = head.next;
+                                            Node head2 = even;
+
+                                            // Go inside Loop : if and only if number of Nodes > 2
+
+                                            while( even != null && even.next != null ) {
+
+                                                odd.next = odd.next.next;
+                                                even.next = even.next.next;
+                                                odd = odd.next;
+                                                even = even.next;
+
+                                            }
+
+                                            // Now Merge , Odd list with Even List
+
+                                            odd.next = head2;
+
+                                            return head;
+
+                                        }
+                                        
+                                    </pre>
+                                    </div>
+                                </div>
+                            </div></div>
+
+
+
+
+
             </div>
+
+
 
         </section>
     </main>

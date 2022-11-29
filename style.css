@@ -19,6 +19,10 @@ button {
     border-radius: 5px;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 /* Header */
 .uni-header {
@@ -39,10 +43,13 @@ button {
 }
 
 /* Main Section */
-.uni-main {}
+.uni-main {
+    padding: 0 0.5rem;
+}
 
 .uni-section {
-    margin: 2rem 0.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
 }
 
 /* Leetcode */
@@ -88,9 +95,10 @@ button {
 }
 
 /* Leetcode Dialog */
-.leetcode-dialog{
+.leetcode-dialog {
     margin: 0.5rem;
 }
+
 .leetcode-dialog h4 {
     margin: 0.5rem 0;
     padding: 0 1rem 0 0;
@@ -127,33 +135,49 @@ button {
 
 
 /* Leetcode Time */
-.leetcode-time{
+.leetcode-time {
     font-size: 105%;
     margin: 0.2rem 0.4rem;
 }
 
 /* leetcode profile */
-.leetcode-profile{
+.leetcode-profile {
     width: 30px;
     height: 30px;
     position: fixed;
+    z-index: 100;
+    right: 3rem;
+    bottom: 5rem;
     padding: 0.5rem;
-    right: 2rem;
     background: #000;
     border: 2px solid #f89f1b;
     border-radius: 50%;
 }
-.leetcode-profile img{
+
+.leetcode-profile img {
     max-width: 100%;
     max-height: 100%;
+    transition: all 100ms;
+}
+
+.leetcode-profile img:hover,
+.leetcode-profile img:active {
+    transform: scale(1.2);
+}
+
+
+/* Leetcode Media */
+.leetcode-solution-media {
+    margin: 1.5rem auto;
+    max-width: 800px;
 }
 
 @media screen and (min-width:1000px) {
     .uni-main {
-        margin: 3rem;
+        margin: 3rem auto;
     }
-    .leetcode-questions{
-    }
+
+    .leetcode-questions {}
 }
 
 
@@ -163,7 +187,8 @@ button {
     :root {
         font-size: 0.75rem;
     }
-    .uni-header h1{
+
+    .uni-header h1 {
         font-size: 1.5rem;
     }
 }
