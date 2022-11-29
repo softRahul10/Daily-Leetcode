@@ -68,6 +68,89 @@
                     </div>
                 </div>
             </div>
+
+
+                <!-- testing -->
+                 <!-- Question Module -->
+             <div class="leetcode">
+                <!-- title -->
+                <div class="leetcode-title">
+                    <h3>Q1. Swap Nodes In Linked List </h3>
+                    <button class="leetcode-level easy">Easy</button>
+                </div>
+                <!-- body -->
+                <div class="leetcode-body">
+                    <!-- Show/Hide -->
+                    <div class="leetcode-dialog">
+                        <h4>Solution</h4>
+                        <button id="show-hide" class="functionality">Show</button>
+                    </div>
+                    <!-- content -->
+                    <div class="leetcode-body-content" id="hidden" style="display:none;">
+                        <div class="leetcode-solution">
+                            <pre>
+                                Node swapPairs(Node head) {
+                                    Node dummy = new Node(0);
+                                    Node curr = head;
+                                    Node prev = dummy;
+
+                                    while(curr!=null && curr.next != null) {
+                                        Node next;
+                                        prev.next = curr.next;
+                                        next = curr.next.next;
+                                        curr.next.next = curr;
+                                        prev = curr;
+                                        curr = next;
+                                    }
+                                    prev.next = curr;
+                                    return dummy.next;
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Question Module -->
+             <div class="leetcode">
+                <!-- title -->
+                <div class="leetcode-title">
+                    <h3>Q1. Swap Nodes In Linked List </h3>
+                    <button class="leetcode-level hard">Hard</button>
+                </div>
+                <!-- body -->
+                <div class="leetcode-body">
+                    <!-- Show/Hide -->
+                    <div class="leetcode-dialog">
+                        <h4>Solution</h4>
+                        <button id="show-hide" class="functionality">Show</button>
+                    </div>
+                    <!-- content -->
+                    <div class="leetcode-body-content" id="hidden" style="display:none;">
+                        <div class="leetcode-solution">
+                            <pre>
+                                Node swapPairs(Node head) {
+                                    Node dummy = new Node(0);
+                                    Node curr = head;
+                                    Node prev = dummy;
+
+                                    while(curr!=null && curr.next != null) {
+                                        Node next;
+                                        prev.next = curr.next;
+                                        next = curr.next.next;
+                                        curr.next.next = curr;
+                                        prev = curr;
+                                        curr = next;
+                                    }
+                                    prev.next = curr;
+                                    return dummy.next;
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- testing -->
            </div>
         </section>
     </main>

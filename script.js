@@ -1,26 +1,21 @@
 // Simple Logic
-const UI_Component = (
-    function() {
-        const uiBtn = document.querySelector("#show-hide");
-        const uiBox = document.querySelector("#hidden");
-        return {
-            uiBtn,
-            uiBox
+// Accessing all buttons 
+const allButtons = document.querySelectorAll("button#show-hide");
+allButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const parent = button.parentElement;
+        const grandParent = parent.nextElementSibling;
+        let grandParentState = grandParent.style.display;
+        if (grandParentState === 'none') {
+            grandParent.setAttribute("style", "display:block");
+            button.innerText = "Hide";
+        } else {
+            grandParent.setAttribute("style", "display:none");
+            button.innerText = "Show";
         }
-    }
-)();
-
-// function
-function showSolution() {
-    const temp = UI_Component.uiBox;
-    const tempState = temp.style.display;
-    if(tempState !== 'block') {
-        temp.style.display = 'block';
-    }else{
-        temp.style.display = 'none';
-    }
-}
-
-UI_Component.uiBtn.addEventListener("click",()=>{
-       showSolution();
+    });
 });
+
+
+
+
