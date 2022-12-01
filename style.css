@@ -42,6 +42,52 @@ img {
     vertical-align: middle;
 }
 
+
+
+/* Progess Bar */
+
+.leetcode-progress{
+    background: #fff;
+    width: 10rem;
+    text-align: center;
+    margin: 1rem 0.5rem;
+    padding: 0.4rem 0.5rem;
+    box-shadow: 1px 2px 17px 4px #22212124;
+}
+.leetcode-progress *{
+    margin: 0;
+} 
+.leetcode-progress >  div{
+    padding: 0.2rem 0;
+}   
+.progress-title,
+.progress-count{
+    display: flex;
+}
+
+.progress-title > h4,
+.progress-count > span{
+    flex: 1;
+}
+.progress-bar{
+    height: 0.5rem;
+    background-color: #eee;
+    border-radius: 1em;
+}
+div.progress-bar{
+    padding: 0;
+}
+.progress-bar .bar{
+    height: 100%;
+    width: 0;
+    border-radius: 1em;
+    background-color: #f89f1b;
+}
+
+/* Progess Bar */
+
+
+
 /* Main Section */
 .uni-main {
     padding: 0 0.5rem;
