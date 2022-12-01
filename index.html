@@ -248,7 +248,37 @@
                                 </div>
                                 <div class="leetcode-body-content" id="hidden" style="display:none;">
                                     <div class="leetcode-solution">
-                                        <pre> Solution coming soon..                              
+                                    <pre>                             
+                                        public ListNode rotateList(ListNode head, int k) {
+
+                                            ListNode dummy = new ListNode(0);
+                                            dummy.next = head;
+
+                                            ListNode fast = dummy;
+                                            ListNode slow = dummy;
+
+                                            // Find the length of Linked List
+
+                                            int i;
+                                            for(i = 0; fast.next != null; i++) {
+                                                fast = fast.next;
+                                            }
+
+                                            // Set Second Pointer
+
+                                            for(int j = (i-k%i); j > 0; j--) {
+                                                slow = slow.next;
+                                            }
+
+                                            // Now just, Rotate The list
+
+                                            fast.next = dummy.next;
+                                            dummy.next = slow.next;
+                                            slow.next = null;
+
+                                            return dummy.next;
+
+                                        }
                                     </pre>
                                     </div>
                                 </div>
