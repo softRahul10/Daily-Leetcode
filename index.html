@@ -57,7 +57,7 @@
             <!-- Questions -->
             <div class="leetcode-questions">
                 <!-- Question Module -->
-                <div class="leetcode">
+                <div class="leetcode leetcode-medium leetcode-linkedlist">
                     <!-- time -->
                     <div class="leetcode-time">
                         <i class="fa-solid fa-clock"></i> <span class="time">28/11/2022</span>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <!-- new Question -->
-                <div class="leetcode">
+                <div class="leetcode leetcode-easy leetcode-linkedlist">
                     <!-- 29/11/2022 -->
                     <!-- Javascript DOM -->
                     <div class="leetcode-time">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="leetcode">
+                <div class="leetcode leetcode-medium leetcode-linkedlist">
                     <!-- 29/11/2022 -->
                     <!-- Javascript DOM -->
                     <div class="leetcode-time">
@@ -206,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="leetcode">
+                <div class="leetcode leetcode-easy leetcode-linkedlist">
                     <!-- 29/11/2022 -->
                     <!-- Javascript DOM -->
                     <div class="leetcode-time">
@@ -250,7 +250,7 @@
                     </div>
                 </div>
 
-                <div class="leetcode">
+                <div class="leetcode leetcode-medium leetcode-linkedlist">
                     <!-- 30/11/2022 -->
                     <!-- Javascript DOM -->
                     <div class="leetcode-time">
@@ -305,7 +305,7 @@
                     </div>
                 </div>
 
-                <div class="leetcode">
+                <div class="leetcode leetcode-easy leetcode-string">
                     <!-- 01/12/2022 -->
                     <!-- Javascript DOM -->
                     <div class="leetcode-time">
@@ -353,12 +353,6 @@
                         </div>
                     </div>
                 </div>
-                
-
-
-
-
-
             </div>
 
 
@@ -392,48 +386,9 @@
                 }
             });
         });
-
-
-        // Creating new Questions
-        function createQuestionUI() {
-            const time = new Date().toLocaleDateString();
-            const container = document.querySelector(".leetcode-questions");
-            const numberOfQuestion = container.childElementCount + 1;
-            const questionTitle = prompt("Enter Question:");
-            const qLevel = prompt("Level:");
-            const sol = prompt("Solution:");
-
-            // DOM Element Creation 
-            const questionUI = document.createElement("div");
-            questionUI.classList.add("leetcode");
-            questionUI.innerHTML = `
-            <!-- ${time} -->
-            <!-- Javascript DOM -->
-                    <div class="leetcode-time">
-                    <i class="fa-solid fa-clock"></i> <span class="time">${time}</span>
-                    </div>
-                    <div class="leetcode-title">
-                        <h3>Q${numberOfQuestion}. ${questionTitle} </h3>
-                        <button class="leetcode-level ${qLevel.toLowerCase()}">${qLevel}</button>
-                    </div>
-                    <div class="leetcode-body">
-                        <!-- Show/Hide -->
-                        <div class="leetcode-dialog">
-                            <h4>Solution</h4>
-                            <button id="show-hide" class="functionality">Show</button>
-                        </div>
-                        <div class="leetcode-body-content" id="hidden" style="display:none;">
-                            <div class="leetcode-solution">
-                                <pre>
-                               ${sol}
-                            </pre>
-                            </div>
-                        </div>
-                    </div>`;
-            container.append(questionUI);
-        }
     </script>
-
+    <!-- Question UI -->
+    <script src="question.js"></script>
     <!-- New Component -->
     <script src="progress.js"></script>
 </body>

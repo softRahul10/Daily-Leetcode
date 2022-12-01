@@ -4,7 +4,7 @@ function updateProgress() {
     const questionUI = document.querySelector("#numberOfSolvedQuestions");
     const targetUI = document.querySelector("#targetQuestion");
 
-    
+
     // Calculate Percentage
     const TARGET = 200;
     const calculateProgress =  (numberOfQuestions*100)/TARGET;
