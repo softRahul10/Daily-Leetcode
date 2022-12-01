@@ -303,7 +303,31 @@
                                 </div>
                                 <div class="leetcode-body-content" id="hidden" style="display:none;">
                                     <div class="leetcode-solution">
-                                        <pre>                               some code...
+                                    <pre>
+                                        // LoopUp Table for vowels
+
+                                        String vowels = "aeiouAEIOU";
+
+                                        public boolean isAlike(String str) {
+                                            
+                                            int mid = str.length() / 2;
+                                            int res = 0;
+
+                                            for(int i = 0, j = mid; i < mid; i++,j++) {
+
+                                                if(vowels.indexOf(str.charAt(i)) >= 0 ) {
+                                                    res++;
+                                                }
+
+                                                if(vowels.indexOf(str.charAt(j)) >= 0) {
+                                                    res--;
+                                                }
+
+                                            }
+
+                                            return res == 0;
+
+                                        }
                                     </pre>
                                     </div>
                                 </div>
