@@ -29,12 +29,13 @@ img {
 .leetcode-topic{
     position: absolute;
     left: 1rem;
-    top: -1.9rem;
-    padding: 0.2rem 0.5rem;
+    top: -2rem;
+    padding: 0.5rem 1rem;
     font-size: 110%;
     background: #000;
     font-weight: bold;
     color: #fff;
+    border-radius: 1em;
 }
 
 .topic-name{

@@ -26,6 +26,7 @@ function createQuestionUI() {
     <!-- ${time} -->
     <!-- Javascript DOM -->
             <div class="leetcode-topic">
+                <i class="fa-solid fa-laptop-code"></i>
                 <span class="topic-name">${topicName}</span>
             </div>
             <div class="leetcode-time">
