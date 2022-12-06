@@ -24,6 +24,24 @@ img {
     max-height: 100%;
 }
 
+
+/* Topic */
+.leetcode-topic{
+    position: absolute;
+    left: 1rem;
+    top: -1.9rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 110%;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+
+
+
 /* Header */
 .uni-header {
     background-color: #000;
@@ -32,6 +50,7 @@ img {
     padding: 1rem 0.5rem;
     position: sticky;
     top: 0;
+    z-index: 1000; /* Always stays on top of other */
 }
 
 .uni-header h1 {
@@ -102,8 +121,10 @@ div.progress-bar{
 .leetcode {
     border: 2px solid #000000;
     padding: 1rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     background-color: #fff;
+    position: relative;
+    z-index: 100;
 }
 
 .leetcode-title,
