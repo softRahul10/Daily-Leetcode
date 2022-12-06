@@ -24,6 +24,27 @@ img {
     max-height: 100%;
 }
 
+/* Leetcode Features */
+.leetcode-functions{
+    display: flex;
+    justify-content: center;
+}
+.leetcode-solution-visibility *{
+    margin: 0;
+}
+.visibility-container{
+    text-align: center;
+    background: #fff;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 7px 0px #958e8e;
+}
+.visibility-container h4{margin: 0.5rem 0;}
+.visibility-container * button{
+    cursor: pointer;
+}
+
+
 
 /* Topic */
 .leetcode-topic{
@@ -76,6 +97,9 @@ img {
     margin: 1rem 0.5rem;
     padding: 0.4rem 0.5rem;
     box-shadow: 1px 2px 17px 4px #22212124;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .leetcode-progress *{
     margin: 0;

@@ -9,3 +9,14 @@ function solution(value) {
         }
     })
 }
+
+const showAllBtn = document.querySelector("#showAll");
+const hideAllBtn = document.querySelector("#hideAll");
+
+showAllBtn.addEventListener("click",()=>{
+    solution("show");
+})
+
+hideAllBtn.addEventListener("click",()=>{
+    solution("hide");
+})

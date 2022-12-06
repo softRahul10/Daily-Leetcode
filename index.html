@@ -31,25 +31,41 @@
         <h1>LeetCode <img src="./LeetCode_logo_rvs.png" alt="" width="40" height="40"> Questions</h1>
     </header>
 
-    <!-- Progess Bar -->
-    <div class="leetcode-progress">
-        <!-- Progess Bar Title -->
-        <div class="progress-title title">
-            <h4>Solved</h4>
-            <h4>Target</h4>
-        </div>
+    <!-- Functionality Section -->
+    <div class="leetcode-functions">
+        <!-- Progess Bar -->
+        <div class="leetcode-progress">
+            <!-- Progess Bar Title -->
+            <div class="progress-title title">
+                <h4>Solved</h4>
+                <h4>Target</h4>
+            </div>
 
-        <!-- Progress Count -->
-        <div class="progress-count count">
-            <span id="numberOfSolvedQuestions">0</span>
-            <span id="targetQuestion">200</span>
+            <!-- Progress Count -->
+            <div class="progress-count count">
+                <span id="numberOfSolvedQuestions">0</span>
+                <span id="targetQuestion">200</span>
+            </div>
+            <!-- Progess Bar -->
+            <div class="progress-bar">
+                <div class="bar"></div>
+            </div>
         </div>
         <!-- Progess Bar -->
-        <div class="progress-bar">
-            <div class="bar"></div>
+        <!-- show & Hide -->
+        <div class="leetcode-solution-visibility">
+            <div class="visibility-container">
+                <h4 class="visibility-title">All Solution</h4>
+                <div class="visibility-option">
+                    <button id="showAll" title="See All Solutions">Show <i class="fa-solid fa-eye"></i></button>
+                    <button id="hideAll" title="Hide All Solutions">Hide <i class="fa-regular fa-eye-slash"></i></button>
+                </div>
+            </div>
         </div>
+        <!-- show & Hide -->
     </div>
-    <!-- Progess Bar -->
+
+
 
     <!-- Body -->
     <main class="uni-main">
@@ -457,27 +473,27 @@
                     <!-- 06/12/2022 -->
                     <!-- 16:13:44 GMT+0530 (India Standard Time) -->
                     <!-- Javascript DOM -->
-                            <div class="leetcode-topic">
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <span class="topic-name">linked list</span>
-                            </div>
-                            <div class="leetcode-time">
-                            <i class="fa-solid fa-clock"></i> <span class="time">06/12/2022</span>
-                            </div>
-                            <div class="leetcode-title">
-                                <h3>Q8. Delete Node in Linked List </h3>
-                                <button class="leetcode-level medium">medium</button>
-                            </div>
-                            <div class="leetcode-body">
-                                <!-- Show/Hide -->
-                                <div class="leetcode-dialog">
-                                    <h4>Solution</h4>
-                                    <button id="show-hide" class="functionality">Show</button>
-                                </div>
-                                <div class="leetcode-body-content" id="hidden" style="display:none;">
-                                    <div class="leetcode-solution">
-                                    <pre>  
-                                        
+                    <div class="leetcode-topic">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span class="topic-name">linked list</span>
+                    </div>
+                    <div class="leetcode-time">
+                        <i class="fa-solid fa-clock"></i> <span class="time">06/12/2022</span>
+                    </div>
+                    <div class="leetcode-title">
+                        <h3>Q8. Delete Node in Linked List </h3>
+                        <button class="leetcode-level medium">medium</button>
+                    </div>
+                    <div class="leetcode-body">
+                        <!-- Show/Hide -->
+                        <div class="leetcode-dialog">
+                            <h4>Solution</h4>
+                            <button id="show-hide" class="functionality">Show</button>
+                        </div>
+                        <div class="leetcode-body-content" id="hidden" style="display:none;">
+                            <div class="leetcode-solution">
+                                <pre>
+
                                         void deleteNode(Node node) {
 
                                             // It's very Easy
@@ -487,9 +503,10 @@
                                         }                                        
                                         
                                     </pre>
-                                    </div>
-                                </div>
-                            </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- new Question -->
 
