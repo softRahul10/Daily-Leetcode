@@ -37,6 +37,9 @@ img {
     color: #fff;
 }
 
+.topic-name{
+    text-transform: capitalize;
+}
 
 
 

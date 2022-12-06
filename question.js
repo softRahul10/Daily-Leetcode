@@ -7,10 +7,11 @@ function createQuestionUI() {
     const container = document.querySelector(".leetcode-questions");
     const numberOfQuestion = container.childElementCount + 1;
 
-    // Questin : Input
+    // Question : Input
     const questionTitle = prompt("Enter Question:");
     const qLevel = prompt("Level:").toLowerCase();
     const qTopic = prompt("Topic:").toLowerCase();
+    const topicName = prompt("Topic Name :");
     const sol = prompt("Solution:");
 
     // DOM Element Creation 
@@ -24,6 +25,9 @@ function createQuestionUI() {
     <!-- ${date} -->
     <!-- ${time} -->
     <!-- Javascript DOM -->
+            <div class="leetcode-topic">
+                <span class="topic-name">${topicName}</span>
+            </div>
             <div class="leetcode-time">
             <i class="fa-solid fa-clock"></i> <span class="time">${date}</span>
             </div>
