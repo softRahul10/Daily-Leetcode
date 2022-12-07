@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft_rahul - Java LeetCode Questions and Solutions Collection </title>
+
+    <!-- Syntax Highlight -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <!-- Theme color -->
     <meta name="theme-color" content="#f89f1b">
     <!-- Favicon -->
@@ -99,6 +103,7 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                <code class="language-java">
                                 Node swapPairs(Node head) {
                                     Node dummy = new Node(0);
                                     Node curr = head;
@@ -115,6 +120,7 @@
                                     prev.next = curr;
                                     return dummy.next;
                                 }
+                            </code>
                             </pre>
                             </div>
                         </div>
@@ -144,6 +150,7 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">
                                       // Detect Cycle in linked List
 
                                       public static boolean findCycle(Node head) {
@@ -165,7 +172,8 @@
                                         }
 
                                         return false;
-                                      }                           
+                                      }                         
+                                      </code>  
                                 </pre>
                             </div>
                         </div>
@@ -201,6 +209,8 @@
                             <div class="leetcode-solution">
 
                                 <pre>
+                                    <code class="language-java">
+
                                         // Odd Even Linked List
                                         
                                         public static Node oddEvenList(Node head) {
@@ -229,7 +239,7 @@
                                             return head;
 
                                         }
-                                        
+                                        </code>
                                     </pre>
                             </div>
                         </div>
@@ -260,6 +270,8 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">
+
                                         public static Node findMiddle(Node head) {
 
                             
@@ -278,7 +290,8 @@
 
                                             return slow;
 
-                                        }                               
+                                        } 
+                                        </code>                              
                                     </pre>
                             </div>
                         </div>
@@ -309,6 +322,8 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">
+
                                         public ListNode rotateList(ListNode head, int k) {
 
                                             ListNode dummy = new ListNode(0);
@@ -339,6 +354,7 @@
                                             return dummy.next;
 
                                         }
+                                        </code>
                                     </pre>
                             </div>
                         </div>
@@ -369,6 +385,8 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">
+
                                         // LoopUp Table for vowels
 
                                         String vowels = "aeiouAEIOU";
@@ -378,7 +396,7 @@
                                             int mid = str.length() / 2;
                                             int res = 0;
 
-                                            for(int i = 0, j = mid; i < mid; i++,j++) {
+                                            for(int i = 0, j = mid; i <co mid; i++,j++) {
 
                                                 if(vowels.indexOf(str.charAt(i)) >= 0 ) {
                                                     res++;
@@ -393,6 +411,7 @@
                                             return res == 0;
 
                                         }
+                                    </code>
                                     </pre>
                             </div>
                         </div>
@@ -422,6 +441,7 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">                                   
 
                                         boolean isClose(String word1, String word2) {
 
@@ -462,7 +482,7 @@
 
                                             return true;
                                         }
-
+                                    </code>
                                     </pre>
                             </div>
                         </div>
@@ -493,6 +513,7 @@
                         <div class="leetcode-body-content" id="hidden" style="display:none;">
                             <div class="leetcode-solution">
                                 <pre>
+                                    <code class="language-java">
 
                                         void deleteNode(Node node) {
 
@@ -501,13 +522,12 @@
                                             node.next = node.next.next;
 
                                         }                                        
-                                        
+                                    </code>
                                     </pre>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- new Question -->
 
             </div>
@@ -525,6 +545,9 @@
     </div>
 
     <!-- js file -->
+    <!-- JS Lib -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
         // Simple Logic
         // Accessing all buttons 
