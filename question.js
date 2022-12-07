@@ -45,7 +45,9 @@ function createQuestionUI() {
                 <div class="leetcode-body-content" id="hidden" style="display:none;">
                     <div class="leetcode-solution">
                     <pre>
+                        <code class="language-java">
                        ${sol}
+                        </code>
                     </pre>
                     </div>
                 </div>
