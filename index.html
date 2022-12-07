@@ -8,8 +8,7 @@
     <title>Soft_rahul - Java LeetCode Questions and Solutions Collection </title>
 
     <!-- Syntax Highlight -->
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <!-- Theme color -->
     <meta name="theme-color" content="#f89f1b">
     <!-- Favicon -->
@@ -62,7 +61,8 @@
                 <h4 class="visibility-title">All Solution</h4>
                 <div class="visibility-option">
                     <button id="showAll" title="See All Solutions">Show <i class="fa-solid fa-eye"></i></button>
-                    <button id="hideAll" title="Hide All Solutions">Hide <i class="fa-regular fa-eye-slash"></i></button>
+                    <button id="hideAll" title="Hide All Solutions">Hide <i
+                            class="fa-regular fa-eye-slash"></i></button>
                 </div>
             </div>
         </div>
@@ -528,7 +528,62 @@
                         </div>
                     </div>
                 </div>
-                <!-- new Question -->
+                <div class="leetcode leetcode-easy leetcode-binary-search">
+                    <!-- 07/12/2022 -->
+                    <!-- 22:23:06 GMT+0530 (India Standard Time) -->
+                    <!-- Javascript DOM -->
+                    <div class="leetcode-topic">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span class="topic-name">binary Search</span>
+                    </div>
+                    <div class="leetcode-time">
+                        <i class="fa-solid fa-clock"></i> <span class="time">07/12/2022</span>
+                    </div>
+                    <div class="leetcode-title">
+                        <h3>Q9. Search in Sorted Array </h3>
+                        <button class="leetcode-level easy">easy</button>
+                    </div>
+                    <div class="leetcode-body">
+                        <!-- Show/Hide -->
+                        <div class="leetcode-dialog">
+                            <h4>Solution</h4>
+                            <button id="show-hide" class="functionality">Show</button>
+                        </div>
+                        <div class="leetcode-body-content" id="hidden" style="display:none;">
+                            <div class="leetcode-solution">
+                                <pre>                        <code class="language-java">
+                                        // Binary Search Algo
+
+                                        int binarySearch(int[] arr, int target) {
+
+                                            int l = 0; // low
+                                            int h = arr.length - 1; // high
+
+                                            while(l <= h) {
+
+                                                int mid = l+(h-l)/2; 
+
+                                                if(target == arr[mid]) {
+                                                    return mid;
+                                                }else if(target > arr[mid]) {
+                                                    l = mid + 1;
+                                                }else {
+                                                    h = mid - 1;
+                                                }
+
+                                            }
+
+                                            return -1;
+
+                                        }
+                                       
+                                        </code>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- new Question  -->
 
             </div>
 
