@@ -24,6 +24,48 @@ img {
     max-height: 100%;
 }
 
+/* Leetcode Tally */
+.leetcode-tally{
+    background-color: #fff;
+    padding: 2rem 1rem;
+    margin: 1rem 1rem 4rem;
+    border-radius: 1em;
+    outline: 1px dotted #00000030;
+    box-shadow: 0px 0px 0px 1px #cfcfcf;
+}
+.tally-parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:0.5rem;
+}
+.tally-child{
+    background: #eee;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+
+}
+#tally-number{
+    font-size: 130%;
+    font-family: monospace;
+    color: red;
+}
+/* Leetcode Tally */
+
+
+
+
+
+
+
+
+
+
 /* Leetcode Features */
 .leetcode-functions{
     display: flex;
