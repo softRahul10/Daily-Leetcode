@@ -20,3 +20,19 @@ showAllBtn.addEventListener("click",()=>{
 hideAllBtn.addEventListener("click",()=>{
     solution("hide");
 })
+
+
+// Topic Tally
+// Tally updater
+function updateTally() {
+    const tallyTopic = document.querySelectorAll('.tally-topic');
+    tallyTopic.forEach(topic => {   
+       const topicId = topic.id;
+       const topicNo = topic.children[1]; 
+       const topicQuery = `.leetcode-${topicId}`;
+       const allQuestions = document.querySelectorAll(topicQuery).length;
+       topicNo.textContent = allQuestions; 
+    });
+}
+
+updateTally();
