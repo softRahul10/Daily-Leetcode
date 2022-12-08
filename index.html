@@ -705,6 +705,21 @@
                                     <pre>
                                         <code class="language-java">
                                             // Two Pointer Approach 
+                                            //ex.  array = [1,2,3,4]
+
+                                            void reverseArray(int[] array) {
+
+                                                int p1 = 0; // first pointer
+                                                int p2 = array.length - 1;  // Second pointer
+
+                                                while(p1 < p2) {
+                                                    int temp = array[p1];
+                                                    array[p1] = array[p2];
+                                                    array[p2] = temp;
+                                                    p1++;
+                                                    p2--;
+                                                }
+                                            } 
                                         </code>
                                     </pre>
                                     </div>
