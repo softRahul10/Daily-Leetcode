@@ -767,7 +767,7 @@
                                                         int findLargestIndex(int[] arr) {
 
                                                             int result = 0;
-                                                            for(int i = 1; i <arr.length; i++) {
+                                                            for(int i = 1; i < arr.length; i++) {
                                                                 if(arr[i] > arr[result]) {
                                                                     result = i;
                                                                 }
@@ -893,7 +893,70 @@
                                 </div>
                             </div></div>
                 <!-- new Question -->
+                
 
+                <!-- new Question -->
+                <div class="leetcode leetcode-easy leetcode-array">
+                    <!-- 10/12/2022 -->
+                    <!-- 22:45:55 GMT+0530 (India Standard Time) -->
+                    <!-- Javascript DOM -->
+                            <div class="leetcode-topic">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span class="topic-name">array</span>
+                            </div>
+                            <div class="leetcode-time">
+                            <i class="fa-solid fa-clock"></i> <span class="time">10/12/2022</span>
+                            </div>
+                            <div class="leetcode-title">
+                                <h3>Q14. Find index Of second Largest element in an Array </h3>
+                                <button class="leetcode-level easy">easy</button>
+                            </div>
+                            <div class="leetcode-body">
+                                <!-- Show/Hide -->
+                                <div class="leetcode-dialog">
+                                    <h4>Solution</h4>
+                                    <button id="show-hide" class="functionality">Show</button>
+                                </div>
+                                <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                    <div class="leetcode-solution">
+                                    <pre>          <code class="language-java">
+                                        
+
+                                        // Example
+                                        // I/P : [10,4,100,200,123]
+                                        // O/P : 4
+
+                                        // I/P : [10,10,10]
+                                        // O/P : -1
+
+                                        int findSecondLargest(int[] arr) {
+
+                                            int res = -1;
+                                            int big = 0;
+
+                                            for(int i = 1; i < arr.length; i++) {
+                                                if(arr[i] > arr[big]) {
+                                                    res = big;
+                                                    big = i;
+                                                }else if(arr[i] != arr[big]) {
+                                                    if(res == -1 || arr[i] > arr[res]) {
+                                                        res = i;
+                                                    }
+                                                }
+                                            }
+
+                                            return res;
+
+                                        }
+
+
+
+                                        </code>
+                                    </pre>
+                                    </div>
+                                </div>
+                            </div></div>
+                <!-- new Question -->
             </div>
         </section>
     </main>
