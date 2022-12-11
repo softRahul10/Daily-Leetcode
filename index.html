@@ -985,7 +985,7 @@
                                         <i class="fa-solid fa-clock"></i> <span class="time">11/12/2022</span>
                                         </div>
                                         <div class="leetcode-title">
-                                            <h3>Q15. Remove Duplicates From an Array </h3>
+                                            <h3>Q15. Remove Duplicates From a Sorted Array </h3>
                                             <button class="leetcode-level easy">easy</button>
                                         </div>
                                         <div class="leetcode-body">
@@ -997,7 +997,32 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
+
+
+                                                        // Q. Remove Duplicates from a Sorted Array and return new array size
+                                                        // I/P : [10,20,20,30,30,30,30]
+                                                        // O/P : 3 [10,20,30] 
+
+
+                                                        int removeDuplicate(int[] arr) {
+
+                                                            int res = 1; // first element is always unique
+
+                                                            for( int i = 1; i < arr.length; i++ ) {
+
+                                                                if(arr[i] != arr[res-1]) {
+                                                                    arr[res] = arr[i];
+                                                                    res++;
+                                                                }
+
+                                                            }
+
+                                                            return res;
+
+                                                        }
+
                                                    
+
                                                     </code>
                                                 </pre>
                                                 </div>
