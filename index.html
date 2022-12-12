@@ -1029,6 +1029,63 @@
                                             </div>
                                         </div></div>
                             <!-- New Question -->
+                            <!-- Question -->
+                            <div class="leetcode leetcode-easy leetcode-array">
+                                <!-- 12/12/2022 -->
+                                <!-- 18:23:51 GMT+0530 (India Standard Time) -->
+                                <!-- Javascript DOM -->
+                                        <div class="leetcode-topic">
+                                            <i class="fa-solid fa-laptop-code"></i>
+                                            <span class="topic-name">array</span>
+                                        </div>
+                                        <div class="leetcode-time">
+                                        <i class="fa-solid fa-clock"></i> <span class="time">12/12/2022</span>
+                                        </div>
+                                        <div class="leetcode-title">
+                                            <h3>Q16. Move all Zeros to End  </h3>
+                                            <button class="leetcode-level easy">easy</button>
+                                        </div>
+                                        <div class="leetcode-body">
+                                            <!-- Show/Hide -->
+                                            <div class="leetcode-dialog">
+                                                <h4>Solution</h4>
+                                                <button id="show-hide" class="functionality">Show</button>
+                                            </div>
+                                            <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                                <div class="leetcode-solution">
+                                                <pre>                        <code class="language-java">
+                                                   
+                                                        // I/P : [0,0,0,0,10]
+                                                        // O/P : [10,0,0,0,0]
+
+                                                        // I/P : [8,5,0,10,0,20]
+                                                        // O/P : [8,5,10,20,0,0]
+
+
+                                                        void moveZeroToEnd(int[] arr) {
+
+                                                            int pos = 0;
+                                                            for(int i = 0; i < arr.length; i++) {
+
+                                                                if(arr[i] != 0) {
+                                                                    int temp = arr[i];
+                                                                    arr[i] = 0;
+                                                                    arr[pos] = temp;
+                                                                    pos++;
+                                                                }
+
+                                                            }
+
+                                                        }
+
+
+
+                                                    </code>
+                                                </pre>
+                                                </div>
+                                            </div>
+                                        </div></div>
+                            <!-- Question -->
             </div>
         </section>
     </main>
