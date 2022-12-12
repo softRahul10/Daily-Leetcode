@@ -1112,7 +1112,27 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                     
-                                                        
+                                                        Node removeDuplicate(Node head) {
+
+                                                            if(head == null || head.next == null) return head;
+
+                                                            Node curr = head;
+                                                            Node temp = head.next;
+
+                                                            while(temp != null) {
+                                                                if(curr.data == temp.data) {
+                                                                    curr.next = temp.next;
+                                                                    temp = temp.next;
+                                                                }else {
+                                                                    curr = curr.next;
+                                                                    temp = temp.next;
+                                                                }
+                                                            }
+
+
+                                                            return head;
+
+                                                        }
                                                     </code>
                                                 </pre>
                                                 </div>
