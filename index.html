@@ -1222,6 +1222,74 @@
                                             </div>
                                         </div></div>
                             <!-- Question -->
+                            <!-- Question -->
+                            <div class="leetcode leetcode-medium leetcode-array">
+                                <!-- 16/12/2022 -->
+                                <!-- 00:48:58 GMT+0530 (India Standard Time) -->
+                                <!-- Javascript DOM -->
+                                        <div class="leetcode-topic">
+                                            <i class="fa-solid fa-laptop-code"></i>
+                                            <span class="topic-name">array</span>
+                                        </div>
+                                        <div class="leetcode-time">
+                                        <i class="fa-solid fa-clock"></i> <span class="time">16/12/2022</span>
+                                        </div>
+                                        <div class="leetcode-title">
+                                            <h3>Q20. Left Rotate an Array by d Places </h3>
+                                            <button class="leetcode-level medium">medium</button>
+                                        </div>
+                                        <div class="leetcode-body">
+                                            <!-- Show/Hide -->
+                                            <div class="leetcode-dialog">
+                                                <h4>Solution</h4>
+                                                <button id="show-hide" class="functionality">Show</button>
+                                            </div>
+                                            <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                                <div class="leetcode-solution">
+                                                <pre>
+                                                                            <code class="language-java">
+                                                                                
+                                                                                // I/P : [1,2,3,4,5,6] d = 2
+                                                                                // O/P : [3,4,5,6,1,2]
+
+                                                                                void leftRotation(int[] arr, int d) {
+
+                                                                                    int n = arr.length;
+
+                                                                                    // Edge cases 
+                                                                                    // If n < d
+                                                                                    if( n < d) {
+                                                                                        d = d % n;
+                                                                                    }
+
+                                                                                    if(n == d || d == 0 || n < 2) return;
+
+                                                                                    // Main reversal algorithm
+                                                                                    reverseArray(arr, 0, d - 1); // Reverse (0, d-1) elements
+
+                                                                                    reverseArray(arr, d, n - 1); // Reverse (d, n- 1) elements
+
+                                                                                    reverseArray(arr, 0, n - 1); // Reverse (0,n-1) Elements
+                                                                                }
+
+                                                                                // Reverse Function
+                                                                                void reverseArray(int[] arr, int l, int h) {
+                                                                                    while(l < h) {
+                                                                                        int temp = arr[h];
+                                                                                        arr[h] = arr[l];
+                                                                                        arr[l] = temp;
+                                                                                        l++;
+                                                                                        h--;
+                                                                                    }
+                                                                                }
+
+
+                                                    </code>
+                                                </pre>
+                                                </div>
+                                            </div>
+                                        </div></div>
+                            <!-- Question -->
             </div>
         </section>
     </main>
