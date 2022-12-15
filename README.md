@@ -16,4 +16,4 @@
 
 
 ####  Live Link
-link: https://softrahul10.github.io/leetCode/
+https://softrahul10.github.io/Daily-Leetcode/
