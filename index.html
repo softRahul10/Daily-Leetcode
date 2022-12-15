@@ -1290,7 +1290,59 @@
                                             </div>
                                         </div></div>
                             <!-- Question -->
-            </div>
+                            <!-- Question -->
+                            <div class="leetcode leetcode-easy leetcode-array">
+                                <!-- 16/12/2022 -->
+                                <!-- 01:07:30 GMT+0530 (India Standard Time) -->
+                                <!-- Javascript DOM -->
+                                        <div class="leetcode-topic">
+                                            <i class="fa-solid fa-laptop-code"></i>
+                                            <span class="topic-name">array</span>
+                                        </div>
+                                        <div class="leetcode-time">
+                                        <i class="fa-solid fa-clock"></i> <span class="time">16/12/2022</span>
+                                        </div>
+                                        <div class="leetcode-title">
+                                            <h3>Q21. Print Leaders in an Array </h3>
+                                            <button class="leetcode-level easy">easy</button>
+                                        </div>
+                                        <div class="leetcode-body">
+                                            <!-- Show/Hide -->
+                                            <div class="leetcode-dialog">
+                                                <h4>Solution</h4>
+                                                <button id="show-hide" class="functionality">Show</button>
+                                            </div>
+                                            <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                                <div class="leetcode-solution">
+                                                <pre>                        <code class="language-java">
+
+                                                        // Print Leader numbers in an Array
+                                                        // which number do we call Leader Number in an Array?
+                                                        // Leader Number : A Number , which only has smaller numbers in its right side.
+                                                        // EX, [7,10,4,10,6,5,2]
+                                                        // Leader Numbers are :  10,6,5,2
+
+                                                        void leaderNumbers(int[] arr) {
+                                                            int currentLeader = arr[arr.length -1];
+                                                            System.out.println(currLeader);
+
+                                                            for(int i = arr.length-2; i >= 0; i--) {
+                                                                if(arr[i] > currentLeader) {
+                                                                    currentLeader = arr[i];
+                                                                    System.out.println(currentLeader);
+                                                                }
+                                                            }
+
+
+                                                        }
+
+                                                    </code>
+                                                </pre>
+                                                </div>
+                                            </div>
+                                        </div></div>
+                            <!-- Question -->
+            </div>      
         </section>
     </main>
 
