@@ -1142,13 +1142,13 @@
 
                             <!-- Question  -->
 
-                            <div class="leetcode leetcode-medium leetcode-linkedlist">
+                            <div class="leetcode leetcode-medium leetcode-linkedlist leetcode-hashing">
                                 <!-- 12/12/2022 -->
                                 <!-- 18:43:00 GMT+0530 (India Standard Time) -->
                                 <!-- Javascript DOM -->
                                         <div class="leetcode-topic">
                                             <i class="fa-solid fa-laptop-code"></i>
-                                            <span class="topic-name">linked list</span>
+                                            <span class="topic-name">linked list & Hashing</span>
                                         </div>
                                         <div class="leetcode-time">
                                         <i class="fa-solid fa-clock"></i> <span class="time">12/12/2022</span>
@@ -1165,8 +1165,37 @@
                                             </div>
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
-                                                <pre>                        <code class="language-java">
-                                                            // fetching from server.......
+                                                <pre>   
+                                                                         <code class="language-java">
+                                                    
+                                                    // I/P : [1,2,3,1,3,1]
+                                                    // O/P : [1,2,3]                                                                                                    
+
+
+                                                    Node removeDuplicateUnsorted(Node head) {
+                                                        if(head == null || head.next == null) return head;
+
+                                                        // Hash Set : Duplicate values are not allowed 
+                                                        HashSet&lt;Integer&gt; hs = new HashSet&lt;&gt;();
+                                                        
+                                                        Node curr = head;
+                                                        Node temp = head.next;
+                                                        hs.add(curr.val); // Because first node is always unique
+
+                                                        while(temp != null) {
+                                                            if(hs.contains(temp.val)) {
+                                                                curr.next = temp.next;
+                                                            }else{
+                                                                hs.add(temp.val);
+                                                                curr = temp;
+                                                            }
+                                                            temp = temp.next;
+                                                        }
+                                                        
+                                                        return head;
+
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
