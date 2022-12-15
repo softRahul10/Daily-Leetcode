@@ -6,7 +6,7 @@ function updateProgress() {
 
 
     // Calculate Percentage
-    const TARGET = 200;
+    const TARGET = 1000;
     const calculateProgress =  (numberOfQuestions*100)/TARGET;
     questionUI.innerHTML = numberOfQuestions;
     targetUI.innerHTML = TARGET;
