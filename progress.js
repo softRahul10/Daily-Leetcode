@@ -14,3 +14,9 @@ function updateProgress() {
 }
 
 updateProgress();
+
+// Question Level 
+function updateLevelInfo() {
+
+}
+
