@@ -92,6 +92,11 @@ img {
     color: #fff;
     font-weight: bold;
 }
+.visible-by-level button:active,
+.visible-by-level button:hover{
+    border: 4px double black;
+    transform: scale(1.2);
+}
 
 
 /* Topic */

@@ -36,3 +36,31 @@ function updateTally() {
 }
 
 updateTally();
+
+
+// General Function for show and Hide question on the basis of level
+function solutionByLevel(level='all') {
+    const everySolution = document.querySelectorAll('.leetcode');
+    everySolution.forEach(sol=>{
+        sol.setAttribute('style','display:none');
+    });
+
+    everySolution.forEach(sol=>{
+        let query = `leetcode-${level}`;
+        if(sol.classList.contains(query)) {
+            sol.setAttribute('style','display:block');
+        }else if(level === 'all') {
+            sol.setAttribute('style','display:block');
+        }
+    })
+}
+
+const everyLevel = document.querySelectorAll('.visible-by-level button');
+
+everyLevel.forEach(button => {
+    button.addEventListener('click',(event)=>{
+        let level = button.id;
+        solutionByLevel(level);
+    })
+})
+
