@@ -24,6 +24,13 @@ img {
     max-height: 100%;
 }
 
+/* Level wise Data */
+.level-wrapper{background-color: #fff; padding: 0.5rem;}
+.level-stats {
+    display: flex;
+}
+
+
 /* Leetcode Tally */
 .leetcode-tally{
     background-color: #fff;

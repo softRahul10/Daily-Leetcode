@@ -16,7 +16,21 @@ function updateProgress() {
 updateProgress();
 
 // Question Level 
-function updateLevelInfo() {
+function updateLevel() {
+    // Ui components
+    const easyUi = document.querySelector('#easySolved');
+    const mediumUi = document.querySelector('#mediumSolved');
+    const hardUi = document.querySelector('#hardSolved');
+
+    const easyLevel = document.querySelectorAll('.leetcode-easy').length;
+    const mediumLevel = document.querySelectorAll('.leetcode-medium').length;
+    const hardLevel = document.querySelectorAll('.leetcode-hard').length;
+
+    easyUi.innerText = easyLevel;
+    mediumUi.innerText = mediumLevel;
+    hardUi.innerText = hardLevel;
+
+
 
 }
 
