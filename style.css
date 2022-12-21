@@ -30,6 +30,18 @@ img {
     display: flex;
 }
 
+.level-easy-bar .progress-bar .bar{
+    background-color: green;
+}
+
+.level-medium-bar .progress-bar .bar{
+    background-color: #ffb800;
+}
+
+.level-hard-bar .progress-bar .bar{
+    background-color: #ff0000;
+}
+
 
 /* Leetcode Tally */
 .leetcode-tally{
