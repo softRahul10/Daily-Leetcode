@@ -1,362 +1,367 @@
 html {
-    box-sizing: border-box;
-    font-size: 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    /* Pattern */
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23b9b9b9' fill-opacity='0.37' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  /* Pattern */
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23b9b9b9' fill-opacity='0.37' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 button {
-    border: none;
-    margin: 0;
-    padding: 2px 8px;
-    height: 2.5rem;
-    border-radius: 5px;
+  border: none;
+  margin: 0;
+  padding: 2px 8px;
+  height: 2.5rem;
+  border-radius: 5px;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Level wise Data */
-.level-wrapper{background-color: #fff; padding: 0.5rem;}
+.level-wrapper {
+  background-color: #fff;
+  padding: 0.5rem;
+  align-self: center;
+}
+
+.level-wrapper > [class*="level"] {
+    padding: 0.5rem 0;
+}
+
+.level-wrapper > [class*="level"] > div {
+    margin:0.2rem 0;
+}
+
 .level-stats {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.level-stats > div{
+    padding: 0 0.3rem;
 }
 
-.level-easy-bar .progress-bar .bar{
-    background-color: green;
+.level-easy-bar .progress-bar .bar {
+  background-color: green;
 }
 
-.level-medium-bar .progress-bar .bar{
-    background-color: #ffb800;
+.level-medium-bar .progress-bar .bar {
+  background-color: #ffb800;
 }
 
-.level-hard-bar .progress-bar .bar{
-    background-color: #ff0000;
+.level-hard-bar .progress-bar .bar {
+  background-color: #ff0000;
 }
 
-
-/* Leetcode Tally */
-.leetcode-tally{
-    background-color: #fff;
-    padding: 2rem 1rem;
-    margin: 1rem 1rem 4rem;
-    border-radius: 1em;
-    outline: 1px dotted #00000030;
-    box-shadow: 0px 0px 0px 1px #cfcfcf;
-}
-.tally-parent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:0.5rem;
-}
-.tally-child{
-    background: #eee;
-    padding: 0.2rem 0.5rem;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+.level-title{
+    color: #fff;
     font-weight: bold;
-
+    display: inline-block;
+    padding: 0.2rem 0.3rem;
+    border-radius: 2px;
 }
-#tally-number{
-    font-size: 130%;
-    font-family: monospace;
-    color: red;
+
+
+/* Leetcode Tally */
+.leetcode-tally {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  margin: 1rem 1rem 4rem;
+  border-radius: 1em;
+  outline: 1px dotted #00000030;
+  box-shadow: 0px 0px 0px 1px #cfcfcf;
+}
+.tally-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.tally-child {
+  background: #eee;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+#tally-number {
+  font-size: 130%;
+  font-family: monospace;
+  color: red;
 }
 /* Leetcode Tally */
-
-
-
-
-
-
-
-
-
 
 /* Leetcode Features */
-.leetcode-functions{
-    display: flex;
-    justify-content: center;
+.leetcode-functions {
+  display: flex;
+  justify-content: center;
 }
-.leetcode-solution-visibility *{
-    margin: 0;
+.leetcode-solution-visibility * {
+  margin: 0;
 }
-.visibility-container{
-    text-align: center;
-    background: #fff;
-    margin: 1rem 0.5rem;
-    padding: 0.5rem 1rem;
-    box-shadow: 1px 1px 7px 0px #958e8e;
+.visibility-container {
+  text-align: center;
+  background: #fff;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 7px 0px #958e8e;
 }
-.visibility-container h4{margin: 0.5rem 0;}
-.visibility-container * button{
-    cursor: pointer;
+.visibility-container h4 {
+  margin: 0.5rem 0;
 }
-.visible-by-level{
-    margin-top: 0.5rem;
+.visibility-container * button {
+  cursor: pointer;
 }
-.visible-by-level button{
-    color: #fff;
-    font-weight: bold;
+.visible-by-level {
+  margin-top: 0.5rem;
+}
+.visible-by-level button {
+  color: #fff;
+  font-weight: bold;
 }
 .visible-by-level button:active,
-.visible-by-level button:hover{
-    background-color: #000;
+.visible-by-level button:hover {
+  background-color: #000;
 }
-
 
 /* Topic */
-.leetcode-topic{
-    position: absolute;
-    left: 1rem;
-    top: -2rem;
-    padding: 0.5rem 1rem;
-    font-size: 110%;
-    background: #000;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 1em;
+.leetcode-topic {
+  position: absolute;
+  left: 1rem;
+  top: -2rem;
+  padding: 0.5rem 1rem;
+  font-size: 110%;
+  background: #000;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 1em;
 }
 
-.topic-name{
-    text-transform: capitalize;
+.topic-name {
+  text-transform: capitalize;
 }
-
-
-
-
 
 /* Header */
 .uni-header {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Always stays on top of other */
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Always stays on top of other */
 }
 
 .uni-header h1 {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .uni-header img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
-
 
 /* Progess Bar */
 
-.leetcode-progress{
-    align-self: center;
-    background: #fff;
-    width: 10rem;
-    text-align: center;
-    margin: 1rem 0.5rem;
-    padding: 0.4rem 0.5rem;
-    box-shadow: 1px 2px 17px 4px #22212124;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.leetcode-progress {
+  align-self: center;
+  background: #fff;
+  width: 10rem;
+  text-align: center;
+  margin: 1rem 0.5rem;
+  padding: 0.4rem 0.5rem;
+  box-shadow: 1px 2px 17px 4px #22212124;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.leetcode-progress *{
-    margin: 0;
-} 
-.leetcode-progress >  div{
-    padding: 0.2rem 0;
-}   
+.leetcode-progress * {
+  margin: 0;
+}
+.leetcode-progress > div {
+  padding: 0.2rem 0;
+}
 .progress-title,
-.progress-count{
-    display: flex;
+.progress-count {
+  display: flex;
 }
 
 .progress-title > h4,
-.progress-count > span{
-    flex: 1;
+.progress-count > span {
+  flex: 1;
 }
-.progress-bar{
-    height: 0.5rem;
-    background-color: #eee;
-    border-radius: 1em;
+.progress-bar {
+  height: 0.5rem;
+  background-color: #eee;
+  border-radius: 1em;
 }
-div.progress-bar{
-    padding: 0;
+div.progress-bar {
+  padding: 0;
 }
-.progress-bar .bar{
-    height: 100%;
-    width: 0;
-    border-radius: 1em;
-    background-color: #f89f1b;
+.progress-bar .bar {
+  height: 100%;
+  width: 0;
+  border-radius: 1em;
+  background-color: #f89f1b;
 }
 
 /* Progess Bar */
 
-
-
 /* Main Section */
 .uni-main {
-    padding: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .uni-section {
-    max-width: 800px;
-    margin: 2rem auto;
+  max-width: 800px;
+  margin: 2rem auto;
 }
 
 /* Leetcode */
 .leetcode {
-    border: 2px solid #000000;
-    padding: 1rem;
-    margin: 3rem 0;
-    background-color: #fff;
-    position: relative;
-    z-index: 100;
+  border: 2px solid #000000;
+  padding: 1rem;
+  margin: 3rem 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
 }
 
 .leetcode-title,
 .leetcode-dialog {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .leetcode-title {
-    margin: 0 0 1rem;
-    justify-content: space-between;
+  margin: 0 0 1rem;
+  justify-content: space-between;
 }
 
 .leetcode-title h3 {
-    margin: 0.5rem;
-    text-transform: capitalize;
+  margin: 0.5rem;
+  text-transform: capitalize;
 }
 
 .leetcode-level {
-    font-weight: 600;
-    color: #fff;
-    min-width: 65px;
-    text-transform: capitalize;
+  font-weight: 600;
+  color: #fff;
+  min-width: 65px;
+  text-transform: capitalize;
 }
 
 .easy {
-    background-color: green;
+  background-color: green;
 }
 
 .medium {
-    background-color: rgb(255, 184, 0);
+  background-color: rgb(255, 184, 0);
 }
 
 .hard {
-    background-color: red;
+  background-color: red;
 }
 
 /* Leetcode Dialog */
 .leetcode-dialog {
-    margin: 0.5rem;
+  margin: 0.5rem;
 }
 
 .leetcode-dialog h4 {
-    margin: 0.5rem 0;
-    padding: 0 1rem 0 0;
+  margin: 0.5rem 0;
+  padding: 0 1rem 0 0;
 }
 
 .leetcode .functionality {
-    cursor: pointer;
-    transition: all 200ms;
+  cursor: pointer;
+  transition: all 200ms;
 }
 
 .leetcode .functionality:hover,
 .leetcode .functionality:active {
-    background-color: rgba(0, 0, 0, 0.486);
-    color: #fff;
+  background-color: rgba(0, 0, 0, 0.486);
+  color: #fff;
 }
 
 /* Solution */
 .leetcode-solution {
-
-    background: #eee;
-    padding: 1rem;
-    margin: 1rem 0;
-    line-height: 1.4;
-    font-weight: 600;
-    color: #161615;
-    word-spacing: 2px;
-    letter-spacing: 0px;
+  background: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #161615;
+  word-spacing: 2px;
+  letter-spacing: 0px;
 }
 
 .leetcode-solution pre {
-    /* white-space: pre-line; */
-    overflow: auto;
+  /* white-space: pre-line; */
+  overflow: auto;
 }
-
 
 /* Leetcode Time */
 .leetcode-time {
-    font-size: 105%;
-    margin: 0.2rem 0.4rem;
+  font-size: 105%;
+  margin: 0.2rem 0.4rem;
 }
 
 /* leetcode profile */
 .leetcode-profile {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    z-index: 100;
-    right: 3rem;
-    bottom: 5rem;
-    padding: 0.5rem;
-    background: #000;
-    border: 2px solid #f89f1b;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 100;
+  right: 3rem;
+  bottom: 5rem;
+  padding: 0.5rem;
+  background: #000;
+  border: 2px solid #f89f1b;
+  border-radius: 50%;
 }
 
 .leetcode-profile img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: all 100ms;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 100ms;
 }
 
 .leetcode-profile img:hover,
 .leetcode-profile img:active {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-
 
 /* Leetcode Media */
 .leetcode-solution-media {
-    margin: 1.5rem auto;
-    max-width: 800px;
+  margin: 1.5rem auto;
+  max-width: 800px;
 }
 
-@media screen and (min-width:1000px) {
-    .uni-main {
-        margin: 3rem auto;
-    }
+@media screen and (min-width: 1000px) {
+  .uni-main {
+    margin: 3rem auto;
+  }
 
-    .leetcode-questions {}
+  .leetcode-questions {
+  }
 }
-
-
 
 /* Mobile */
-@media screen and (max-width:600px) {
-    :root {
-        font-size: 0.75rem;
-    }
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 0.75rem;
+  }
 
-    .uni-header h1 {
-        font-size: 1.5rem;
-    }
+  .uni-header h1 {
+    font-size: 1.5rem;
+  }
 }
