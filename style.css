@@ -29,6 +29,7 @@ img {
   background-color: #fff;
   padding: 0.5rem;
   align-self: center;
+  box-shadow: 1px 1px 7px 0px #958e8e;
 }
 
 .level-wrapper > [class*="level"] {
@@ -106,6 +107,7 @@ img {
   display: flex;
   justify-content: center;
 }
+.leetcode-solution-visibility { order: -1; }
 .leetcode-solution-visibility * {
   margin: 0;
 }
@@ -363,5 +365,16 @@ div.progress-bar {
 
   .uni-header h1 {
     font-size: 1.5rem;
+  }
+  .leetcode-functions{
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  .leetcode-progress {
+    width: auto;
+    align-self: stretch;
+  }
+  .level-wrapper {
+    align-self: stretch;
   }
 }

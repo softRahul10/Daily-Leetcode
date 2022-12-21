@@ -56,11 +56,16 @@ function solutionByLevel(level='all') {
 }
 
 const everyLevel = document.querySelectorAll('.visible-by-level button');
-
 everyLevel.forEach(button => {
     button.addEventListener('click',(event)=>{
         let level = button.id;
         solutionByLevel(level);
     })
 })
+
+// HOme Button
+const homeBtn = document.getElementById('home');
+homeBtn.addEventListener('click',()=>{
+    solutionByLevel();
+});
 
