@@ -1670,6 +1670,75 @@
                                         </div></div>
 
                             <!-- Question -->
+                            <!-- Question -->
+                            <div class="leetcode leetcode-easy leetcode-binary-search">
+                                <!-- 22/12/2022 -->
+                                <!-- 20:33:18 GMT+0530 (India Standard Time) -->
+                                <!-- Javascript DOM -->
+                                        <div class="leetcode-topic">
+                                            <i class="fa-solid fa-laptop-code"></i>
+                                            <span class="topic-name">Binary Search</span>
+                                        </div>
+                                        <div class="leetcode-time">
+                                        <i class="fa-solid fa-clock"></i> <span class="time">22/12/2022</span>
+                                        </div>
+                                        <div class="leetcode-title">
+                                            <h3>Q26. Find First Occurrence of an element in sorted Array  </h3>
+                                            <button class="leetcode-level easy">easy</button>
+                                        </div>
+                                        <div class="leetcode-body">
+                                            <!-- Show/Hide -->
+                                            <div class="leetcode-dialog">
+                                                <h4>Solution</h4>
+                                                <button id="show-hide" class="functionality">Show</button>
+                                            </div>
+                                            <div class="leetcode-body-content" id="hidden" style="display:none;">
+                                                <div class="leetcode-solution">
+                                                <pre>                        <code class="language-java">
+
+                                                    /*
+                                                        * I/P : [1,2,2,2,2,4,20,100] , 2
+                                                        * O/P :  1
+                                                    */
+
+                                                    // Find First Occurrence of an element in sorted Array
+                                                    public static int findFirst(int[] array,int target) {
+
+                                                        int low = 0;
+                                                        int high = array.length - 1;
+                                                
+                                                        while (low <= high) {
+                                                            int mid = low + (high - low)/2;
+                                                            if(array[mid] > target) {
+                                                                high = mid - 1;
+                                                            }else if(array[mid] < target) {
+                                                                low = mid + 1;
+                                                            }else{
+                                                                if(mid == 0 || array[mid] != array[mid-1]) {
+                                                                    return mid;
+                                                                }else{
+                                                                    high = mid - 1;
+                                                                }
+                                                            }
+                                                        }
+                                                
+                                                        return -1;
+                                                    }
+
+                                                    </code>
+                                                </pre>
+                                                </div>
+                                            </div>
+                                        </div></div>
+                            <!-- Question -->
+
+                            <!-- Question -->
+
+                            <!-- Question -->
+
+                            <!-- Question -->
+
+                            <!-- Question -->
             </div>      
         </section>
     </main>
