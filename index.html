@@ -1819,7 +1819,23 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                   
+
+                                                    /*
+                                                        * I/P : [1,1,1,1,1,1,10,14,100], 1
+                                                        * O/P : 6
+                                                    */
+
+                                                    // Count Occurrence of an element in sorted array using binary search
+                                                    public static int findAll(int[] arr, int target) {
+
+                                                        int firstIndex = FindFirstOccurrence.findFirst(arr,target);
+                                                        if(firstIndex == -1) {
+                                                            return 0;
+                                                        }
+                                                        int lastIndex = FindLastOccurrence.findLast(arr,target);
+                                                        return (lastIndex - firstIndex+1);
+
+                                                    }
                                                     </code>
                                                 </pre>
                                                 </div>
