@@ -1867,31 +1867,8 @@
     <!-- JS Lib -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script>
-        // Simple Logic
-        // Accessing all buttons 
-        const allButtons = document.querySelectorAll("button#show-hide");
-        allButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const parent = button.parentElement;
-                const grandParent = parent.nextElementSibling;
-                let grandParentState = grandParent.style.display;
-                if (grandParentState === 'none') {
-                    grandParent.setAttribute("style", "display:block");
-                    button.innerText = "Hide";
-                } else {
-                    grandParent.setAttribute("style", "display:none");
-                    button.innerText = "Show";
-                }
-            });
-        });
-    </script>
-    <!-- Question UI -->
-    <script src="question.js"></script>
-    <!-- New Component -->
-    <script src="progress.js"></script>
-    <!-- Features -->
-    <script src="features.js"></script>
+    <!-- Js -->
+    <script src="main.js"></script>
 </body>
 
 </html>
