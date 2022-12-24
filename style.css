@@ -24,6 +24,15 @@ img {
   max-height: 100%;
 }
 
+
+/* footer */
+.uni-footer{
+  background-color: #000;
+  color:#fff;
+  text-align: center;
+  padding: 0.5rem 2rem;
+}
+
 /* Level wise Data */
 .level-wrapper {
   background-color: #fff;
