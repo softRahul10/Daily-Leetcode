@@ -150,6 +150,28 @@ homeBtn.addEventListener('click', () => {
 });
 
 // ...
+// Show Topic wise Solutions
+function visibleQuestionsByTopic(subject) {
+    // Access all Questions
+    const everyQuestion = document.querySelectorAll('.leetcode');
+    const subjectString = `leetcode-${subject}`;
+    everyQuestion.forEach(question=>{
+        question.setAttribute('style','display:none');
+    })
+
+    // Now, show only selected questions
+    everyQuestion.forEach(question=>{
+        if(question.classList.contains(subjectString)) {
+            question.setAttribute('style','display:block');
+        }
+    })
+}
+
+
+
+
+
+// ...
 // Creating new Questions
 function createQuestionUI() {
 
@@ -164,7 +186,6 @@ function createQuestionUI() {
     const qLevel = prompt("Level:").toLowerCase();
     const qTopic = prompt("Topic:").toLowerCase();
     const topicName = prompt("Topic Name :");
-    const sol = prompt("Solution:");
 
     // DOM Element Creation 
     const questionUI = document.createElement("div");
