@@ -170,7 +170,6 @@ function visibleQuestionsByTopic(subject) {
 
 
 
-
 // ...
 // Creating new Questions
 function createQuestionUI() {
