@@ -2185,7 +2185,57 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
+
+                                                    /* Palindrome linked list */
+                                                    /*
+                                                        I/P : [1,2,2,1]
+                                                        O/P : true
+
+                                                        I/P : [1,2]
+                                                        O/P : false
+                                                    */
+
+                                                    boolean isPalindrome(ListNode head) {
                                                         
+                                                        if(head == null || head.next != null) return true;
+
+                                                        // Step 1: find middle node of list using fast & slow algo
+
+                                                        ListNode fast = head;
+                                                        ListNode slow = head;
+
+                                                        while(fast != null && fast.next != null) {
+                                                            slow = slow.next;
+                                                            fast = fast.next.next;
+                                                        }
+
+                                                        // Step 2: Reverse list from slow to end
+                                                        
+                                                        
+                                                        ListNode curr = slow;
+                                                        ListNode prev = null;
+
+                                                        while(curr != null) {
+                                                            ListNode temp = curr.next;
+                                                            curr.next = prev;
+                                                            prev = curr;
+                                                            curr = temp;
+                                                        }
+
+                                                        // Step 3: Compare both list 
+                                                        
+                                                        ListNode temp1 = head;
+                                                        ListNode temp2 = prev;
+
+                                                        while(temp1 != null && temp2 != null) {
+                                                            if(temp1.val != temp2.val) return false;
+                                                            temp1 = temp1.next;
+                                                            temp2 = temp2.next;
+                                                        }
+
+                                                        return true;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
