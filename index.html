@@ -2130,7 +2130,29 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                   
+                                                 /*
+                                                        Print Frequencies of Element in a Sorted Array
+
+                                                        I/P : [10,10,10,25,30,30]
+                                                        O/P : (10,3) (25,1) (30,2)
+                                                 */
+                                                
+                                                    void printFrequencies(int[] arr) {
+                                                        
+                                                        int curr = arr[0];
+                                                        int count = 1;
+                                                    
+                                                        for(int i = 1; i < arr.length; i++) {
+                                                            if(arr[i] == curr) {
+                                                                count++;
+                                                            }else{
+                                                                System.out.println( curr + "," + count );
+                                                                curr = arr[i];
+                                                                count = 1;
+                                                            }
+                                                        }
+                                                        System.out.println( curr + "," + count );
+                                                    }
                                                     </code>
                                                 </pre>
                                                 </div>
