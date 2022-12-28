@@ -218,7 +218,7 @@ function createQuestionUI() {
                     <div class="leetcode-solution">
                     <pre>
                         <code class="language-java">
-                       ${sol}
+                      
                         </code>
                     </pre>
                     </div>
