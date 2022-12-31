@@ -2446,6 +2446,27 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    // Efficient Solution
+                                                    public static void printCommonElements(int[] numOne, int[] numTwo) {
+                                                        int i = 0;
+                                                        int j = 0;
+                                                        while(i < numOne.length && j < numTwo.length) {
+                                                            if(i > 0 && numOne[i] == numOne[i-1]) {
+                                                                i++;
+                                                                continue;
+                                                            }
+                                                            if(numOne[i] > numTwo[j]) {
+                                                                j++;
+                                                            }else if(numOne[i] < numTwo[j]) {
+                                                                i++;
+                                                            }else{
+                                                                System.out.println(numOne[i]);
+                                                                i++;
+                                                                j++;
+                                                            }
+                                                        }
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
