@@ -2601,7 +2601,38 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    /*
+                                                        I/P : 2
+                                                        O/P : 1
+
+                                                        I/P : 9
+                                                        O/P : 3
+
+                                                        I/P : 14
+                                                        O/P : 3
+                                                    */
+
+
+                                                    public static int square(int x) {
+                                                        int s = 1;
+                                                        int e = x;
+                                                        int ans = -1;
+                                                        while(s <= e) {
+                                                            int mid = (s+e)/2;
+                                                            int sq = mid * mid;
+                                                            if(sq == x) {
+                                                                return mid;
+                                                            }else if(sq > x) {
+                                                                e = mid - 1;
+                                                            }else{
+                                                                s = mid + 1;
+                                                                ans = mid;
+                                                            }
+                                                        }
+                                                        return ans;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
