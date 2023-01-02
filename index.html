@@ -1478,6 +1478,22 @@
 
                                                         }
 
+
+                                                        // Recursive Solution
+
+                                                        Node reverseList(Node head, Node prev) {
+                                                            // Base case
+                                                            if(head == null) {
+                                                                return prev;
+                                                            }
+
+                                                            // Recursive Case
+                                                            Node temp = head.next;
+                                                            head.next = prev;
+
+                                                            return reverseList(temp,head);
+                                                        }
+
                                                     </code>
                                                 </pre>
                                                 </div>
