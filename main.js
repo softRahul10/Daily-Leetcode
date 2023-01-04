@@ -193,7 +193,6 @@ function SearchTopic() {
 SearchTopic();
 
 // Adding Event listener for Search Box
-
 searchBox.addEventListener('change',function(){
     SearchTopic();
 });
