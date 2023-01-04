@@ -37,6 +37,18 @@ img {
   gap: 2rem;
 }
 
+.leetcode-search #topic {
+  padding: 0.3rem 0.5rem;
+  background: #ffd400;
+  color: #100e0e;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 1em;
+  text-transform: capitalize;
+  text-align: center;
+}
 /* footer */
 .uni-footer {
   background-color: #000;

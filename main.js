@@ -185,9 +185,9 @@ function SearchTopic() {
     // show number of question solved
     if (searchTopic === 'all') {
         let n = document.querySelectorAll('.leetcode').length;
-        menuInfo.innerText = n;
+        menuInfo.innerHTML =`<i class="fa-solid fa-hashtag"></i> ${n}`;
     } else {
-        menuInfo.innerText = searchResult;
+        menuInfo.innerHTML = `<i class="fa-solid fa-hashtag"></i> ${searchResult}`;
     }
 }
 SearchTopic();
