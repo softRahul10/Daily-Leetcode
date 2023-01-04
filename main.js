@@ -1,3 +1,6 @@
+// Global Elements
+const searchBox =  document.querySelector('.search-box #topic');
+
 // Simple Logic
 // Accessing all buttons 
 const allButtons = document.querySelectorAll("button#show-hide");
@@ -175,8 +178,10 @@ function SearchTopic() {
     let searchTopic = menu.value;
     let searchString = `.leetcode-${searchTopic}`;
     let searchResult = document.querySelectorAll(searchString).length;
+
     // calling solution by level function
     solutionByLevel(searchTopic);
+
     // show number of question solved
     if (searchTopic === 'all') {
         let n = document.querySelectorAll('.leetcode').length;
@@ -185,7 +190,13 @@ function SearchTopic() {
         menuInfo.innerText = searchResult;
     }
 }
+SearchTopic();
 
+// Adding Event listener for Search Box
+
+searchBox.addEventListener('change',function(){
+    SearchTopic();
+});
 
 // ...
 // Creating new Questions
