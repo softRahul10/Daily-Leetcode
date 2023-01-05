@@ -1,3 +1,6 @@
+// Global Elements
+const searchBox =  document.querySelector('.search-box #topic');
+
 // Simple Logic
 // Accessing all buttons 
 const allButtons = document.querySelectorAll("button#show-hide");
@@ -155,20 +158,44 @@ function visibleQuestionsByTopic(subject) {
     // Access all Questions
     const everyQuestion = document.querySelectorAll('.leetcode');
     const subjectString = `leetcode-${subject}`;
-    everyQuestion.forEach(question=>{
-        question.setAttribute('style','display:none');
+    everyQuestion.forEach(question => {
+        question.setAttribute('style', 'display:none');
     })
 
     // Now, show only selected questions
-    everyQuestion.forEach(question=>{
-        if(question.classList.contains(subjectString)) {
-            question.setAttribute('style','display:block');
+    everyQuestion.forEach(question => {
+        if (question.classList.contains(subjectString)) {
+            question.setAttribute('style', 'display:block');
         }
     })
 }
 
+//...
+// Search Question by Topic
+function SearchTopic() {
+    const menu = document.querySelector('.search-box #topic');
+    const menuInfo = document.querySelector('.search-result');
+    let searchTopic = menu.value;
+    let searchString = `.leetcode-${searchTopic}`;
+    let searchResult = document.querySelectorAll(searchString).length;
 
+    // calling solution by level function
+    solutionByLevel(searchTopic);
 
+    // show number of question solved
+    if (searchTopic === 'all') {
+        let n = document.querySelectorAll('.leetcode').length;
+        menuInfo.innerHTML =`<i class="fa-solid fa-hashtag"></i> ${n}`;
+    } else {
+        menuInfo.innerHTML = `<i class="fa-solid fa-hashtag"></i> ${searchResult}`;
+    }
+}
+SearchTopic();
+
+// Adding Event listener for Search Box
+searchBox.addEventListener('change',function(){
+    SearchTopic();
+});
 
 // ...
 // Creating new Questions

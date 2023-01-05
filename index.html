@@ -32,7 +32,11 @@
 <body>
     <!-- Universal Header  -->
     <header class="uni-header">
-        <h1>LeetCode <img src="./LeetCode_logo_rvs.png" alt="" width="40" height="40"> Questions</h1>
+        <h1> 
+            <img src="./LeetCode_logo_rvs.png" alt="" width="40" height="40">
+            <img src="./gfg.png" alt="" width="40" height="40" style="margin: 0 0 0 -6px;"> 
+            Big-O
+            Cafe!</h1>
     </header>
 
     <!-- Functionality Section -->
@@ -129,6 +133,29 @@
         </div>
         <!-- show & Hide -->
     </div>
+    <!-- New Section: Topic Wise Tally -->
+     <div class="leetcode-search">
+        <div class="search-label">
+            <label for="topic"> Select Topic <i class="fa-solid fa-layer-group"></i> </label>
+        </div>
+        <div class="search-box">
+            <select name="leetcode" id="topic">
+                <option value="all">All</option>
+                <option value="array">Array</option>
+                <option value="binary-search">Binary Search</option>
+                <option value="sorting">Sorting</option>
+                <option value="matrix">Matrix</option>
+                <option value="linkedlist">Linked List</option>
+                <option value="hashing">Hashing</option>
+                <option value="string">String</option>
+                <option value="stack">Stack</option>
+            </select>
+        </div>
+        <span class="search-result"> <i class="fa-solid fa-hashtag"></i> 1000</span>
+     </div>   
+
+    <!-- New Section:end -->
+
 
     <!-- Leetcode Question Tally -->
     <section class="leetcode-tally">
