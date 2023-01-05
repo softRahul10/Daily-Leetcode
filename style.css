@@ -24,6 +24,23 @@ img {
   max-height: 100%;
 }
 
+/* footer data */
+.footer-info{
+  padding: 3rem 1rem;
+}
+.footer-info table{
+  margin: 1rem auto;
+}
+.footer-info th{
+  text-align: left;
+}
+.footer-info td{
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
 /* Search */
 .leetcode-search {
   padding: 1rem;
@@ -49,6 +66,14 @@ img {
   text-transform: capitalize;
   text-align: center;
 }
+
+@media screen and (max-width:600px) {
+  .leetcode-search{
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 /* footer */
 .uni-footer {
   background-color: #000;
