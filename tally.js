@@ -1,3 +1,25 @@
+// sort function for program
+
+// sort 
+function sort(arr) {
+    let isSwapped;
+    for(let i = 0; i < arr.length-1; i++) {
+        isSwapped = false;
+        for(let j = 0; j < arr.length - i - 1; j++) {
+            if(arr[j].value < arr[j+1].value) {
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                isSwapped = true;
+            }
+        }
+        if(!isSwapped) {
+            break;
+        }
+    }
+}
+
+
 /* Questions Info */
 const UniversalData = (function fetchQuestionData() {
 
@@ -93,29 +115,3 @@ const tallyArray = [
     value:UniversalData.queueTotal
    }
 ];
-
-
-
-console.log("Before Sorting " ,data);
-
-// sort 
-function sort(arr) {
-    let isSwapped;
-    for(let i = 0; i < arr.length-1; i++) {
-        isSwapped = false;
-        for(let j = 0; j < arr.length - i - 1; j++) {
-            if(arr[j].subjectInfo < arr[j+1].subjectInfo) {
-                let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-                isSwapped = true;
-            }
-        }
-        if(!isSwapped) {
-            break;
-        }
-    }
-}
-
-sort(data);
-console.log("After Sorting ",data);
