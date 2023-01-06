@@ -70,8 +70,8 @@ function updateLevel() {
     hardUi.innerText = hardLevel;
 
     // Update Bar
-    easyBar.style.width = `${calculateLevelPercentage(200, easyLevel)}%`;
-    mediumBar.style.width = `${calculateLevelPercentage(600, mediumLevel)}%`;
+    easyBar.style.width = `${calculateLevelPercentage(400, easyLevel)}%`;
+    mediumBar.style.width = `${calculateLevelPercentage(400, mediumLevel)}%`;
     hardBar.style.width = `${calculateLevelPercentage(200, hardLevel)}%`;
 }
 
