@@ -1,19 +1,33 @@
-# Leetcode interview Questions Collection 
-###### This repo will contain all the leetcode Questions & solution that I will solve in my preparation. 
-#### Programming Language : Java 
-#### Content : Question and Optimized Solution Code  ( with images )
+# Big-O Cafe
+###### This repo will have all the Coding Questions and their solutions that I will solve in coding Journey. 
+### My Target : 1000 (Good Questions)
+### I've Solved: 50+ (Till  now)
 
-### UI Demo 
+#### Programming Language : Java (I'm using Java for DSA)
+#### Question Source : Leetcode (primary) & GeeksforGeek (secondary)
 
-![Screenshot_2022-12-16_02-05-54](https://user-images.githubusercontent.com/116769878/207963220-2d120eb4-75b4-428b-af04-267b83e459cf.png)
-![Screenshot_2022-12-16_02-07-18](https://user-images.githubusercontent.com/116769878/207963280-6619ca79-bc1e-41a1-bb9a-58c4ccacc638.png)
+
+### Demo 
+### Home Page
+
+![home](https://user-images.githubusercontent.com/116769878/211095778-c32b07fe-fd67-4ed7-8650-e3f882200672.png)
+
+### Sorting Feature
+
+![sorting1](https://user-images.githubusercontent.com/116769878/211096148-abee5c3f-20d0-4732-b943-60f7599deed2.png)
+
+### Solution with  Syntax Highlighting
+
+![solution](https://user-images.githubusercontent.com/116769878/211096674-c29cb7b8-187a-4292-892a-ef27466206b6.png)
+
+### footer
+
+![footer](https://user-images.githubusercontent.com/116769878/211096707-a5be8cd1-6b26-43eb-a1ec-c145d90c47ae.png)
+
 
 ### Mobile View
-![softrahul10 github io_leetCode_(iPhone SE)](https://user-images.githubusercontent.com/116769878/207963589-cb6cccb0-96fc-4b28-aa65-131521fdea55.png)
-![softrahul10 github io_leetCode_(iPhone SE) (1)](https://user-images.githubusercontent.com/116769878/207963606-bd9aec8d-853b-4030-b819-3dd94047047a.png)
 
 
 
-
-####  Live Link
+# Live Link
 https://softrahul10.github.io/Daily-Leetcode/
