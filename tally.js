@@ -20,6 +20,18 @@ function sort(arr) {
 }
 
 
+// Create Tally Ui
+function createTally(name,id,value) {
+    const div = document.createElement('div');
+    div.classList.add('tally-child','tally-topic');
+    div.id = `${id}`;
+    div.innerHTML = `
+        <span> ${name} </span>
+        <span id='tally-number'> ${value} </span>
+    `;
+    return div;
+}
+
 /* Questions Info */
 const UniversalData = (function fetchQuestionData() {
 
@@ -115,3 +127,15 @@ const tallyArray = [
     value:UniversalData.queueTotal
    }
 ];
+
+// sort data before filling 
+sort(tallyArray);
+
+// Fill Tally 
+const tallyContainer = document.querySelector('.tally-parent');
+const section = new DocumentFragment();
+
+tallyArray.forEach(tally => {
+
+});
+
