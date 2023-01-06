@@ -2857,6 +2857,28 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+
+                                                    /*
+                                                        Q. Check K-th bit is set or not
+
+                                                        i/p: n(8),k(4)
+                                                        o/p: true
+
+                                                        i/p: n(7),k(1)
+                                                        o/p: true
+
+                                                        i/p: n(0),k(1)
+                                                        o/p: false
+                                                    */
+
+                                                    boolean checkSetBit(int n, int k) {
+                                                        if(n == 0 || k > 32) return false;
+
+                                                        // using right shift operator
+                                                        return ( (n >> (k-1) & 1) == 1);
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
