@@ -107,18 +107,18 @@ hideAllBtn.addEventListener("click", () => {
 
 // Topic Tally
 // Tally updater
-function updateTally() {
-    const tallyTopic = document.querySelectorAll('.tally-topic');
-    tallyTopic.forEach(topic => {
-        const topicId = topic.id;
-        const topicNo = topic.children[1];
-        const topicQuery = `.leetcode-${topicId}`;
-        const allQuestions = document.querySelectorAll(topicQuery).length;
-        topicNo.textContent = allQuestions;
-    });
-}
+// function updateTally() {
+//     const tallyTopic = document.querySelectorAll('.tally-topic');
+//     tallyTopic.forEach(topic => {
+//         const topicId = topic.id;
+//         const topicNo = topic.children[1];
+//         const topicQuery = `.leetcode-${topicId}`;
+//         const allQuestions = document.querySelectorAll(topicQuery).length;
+//         topicNo.textContent = allQuestions;
+//     });
+// }
 
-updateTally();
+// updateTally();
 
 
 // General Function for show and Hide question on the basis of level
