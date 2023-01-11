@@ -2949,7 +2949,7 @@
                                 <!-- Javascript DOM -->
                                         <div class="leetcode-topic">
                                             <i class="fa-solid fa-laptop-code"></i>
-                                            <span class="topic-name">binary search</span>
+                                            <span class="topic-name"> ( Un-Bounded ) binary search</span>
                                         </div>
                                         <div class="leetcode-time">
                                         <i class="fa-solid fa-clock"></i> <span class="time">09/01/2023</span>
@@ -2969,10 +2969,29 @@
                                                 <pre>                        <code class="language-java">
                                                   
 
+                                                    /* Unbounded Binary Search */
                                                     /* Search in an Infinite Array */
                                                     
                                                     int search(int[] arr, int target) {                                                        
+                                                        // Main Logic here is 
+                                                        // 1. find bigger element than target
+                                                        // Then use that element's index as 
+                                                        // a h(high) in binary search
 
+                                                        if(arr[0] == target) return 0;
+
+                                                        int i = 1;
+                                                        while(arr[i] < target) {
+                                                            i = i * 2;
+                                                            if(arr[i] == target) return i;
+                                                        }
+
+                                                        // after this
+                                                        // just call  binary search with s As a 0
+                                                        // and e (or high) as i
+
+                                                        return binarySearch(arr,0,i,target);
+                                    
                                                     } 
 
                                                     </code>
