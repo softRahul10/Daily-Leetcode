@@ -3058,6 +3058,29 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+                                                        I/P : 1
+                                                        O/P : true
+
+                                                        I/P : 4,8,16
+                                                        O/P : true
+
+                                                        I/P : 6
+                                                        O/P : false
+
+                                
+                                                    */
+
+                                                    boolean isPowerOfTwo(int n) {
+                                                        // I can solve this problem very easily 
+                                                        // by using Brian's algorithm
+
+                                                        if(n == 0) return false;
+                                                        n = n & (n-1);
+
+                                                        return n == 0;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
