@@ -3248,7 +3248,49 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+
+                                                    /*
+                                                        I/P: [1,1,2,6,2,4,4,20,9,11,20,9,9,11]
+                                                        O/P : 6,9 
+                                                    */
+
+                                                    int[] findOddNumbers(int[] nums) {
+
+                                                        int[] result = new int[2];
+                                                        int xor = 0;
+                                                        int n1 = 0;
+                                                        int n2 = 0;
+
+                                                        // Step 1: Take xor of all numbers 
+
+                                                        for(int i = 0; i < nums.length; i++) {
+                                                            xor = xor ^ nums[i];
+                                                        }
+
+                                                        // Step 2: Find right most set bit of xor number
+
+                                                        xor = xor & ~(xor-1); // finding right most set bit
+
+                                                        // Step 3: Divide Array into two groups
+
+                                                        for(int i = 0; i < nums.lenght; i++) {
+                                                            if((nums[i] & xor) != 0) {
+                                                                n1 = n1 ^ nums[i]; // Group 1: Bit is set
+                                                            }else{
+                                                                n2 = n2 ^ nums[i]; // Group 2: Bit is not set
+                                                            }
+                                                        }
+
+                                                        // Step 4: Fill results in array and return it.
+                                                        result[0] = n1;
+                                                        result[1] = n2;
+
+                                                        return result;
+
+                                                    }   
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
