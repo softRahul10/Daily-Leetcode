@@ -60,6 +60,10 @@ const UniversalData = (function fetchQuestionData() {
   ).length;
   const stackTotal = document.querySelectorAll(".leetcode-stack").length;
   const queueTotal = document.querySelectorAll(".leetcode-queue").length;
+  const treeTotal = document.querySelectorAll(".leetcode-tree").length;
+  const bstTotal = document.querySelectorAll(".leetcode-bst").length;
+  const heapTotal = document.querySelectorAll(".leetcode-heap").length;
+  const graphTotal = document.querySelectorAll(".leetcode-graph").length;
 
   return {
     mathTotal,
@@ -74,6 +78,10 @@ const UniversalData = (function fetchQuestionData() {
     linkedlistTotal,
     stackTotal,
     queueTotal,
+    treeTotal,
+    bstTotal,
+    heapTotal,
+    graphTotal,
   };
 })();
 
@@ -137,6 +145,26 @@ const tallyArray = [
     name: "Queue",
     id: "queue",
     value: UniversalData.queueTotal,
+  },
+  {
+    name: "Tree",
+    id: "tree",
+    value: UniversalData.treeTotal,
+  },
+  {
+    name: "Binary Search Tree",
+    id: "bst",
+    value: UniversalData.bstTotal,
+  },
+  {
+    name: "Heap",
+    id: "heap",
+    value: UniversalData.heapTotal,
+  },
+  {
+    name: "Graph",
+    id: "graph",
+    value: UniversalData.graphTotal,
   },
 ];
 
