@@ -3134,7 +3134,31 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                        /*
+                                                            I/P : 12
+                                                            O/P : 2 (Number of Digit in 12 is 2)
+
+                                                            I/P : 0
+                                                            O/P : 0 (Number of Digit in 0 is 0)
+
+                                                            I/P : 1200
+                                                            O/P : 4 (Number of Digit in 1200 is 4)
+
+                                                        */
+
+                                                        int countDigit(int n) {
+
+                                                            int res = 0;
+
+                                                            while(n != 0) {
+                                                                n = n / 10;
+                                                                res++;
+                                                            }
+
+                                                            return res;
+                                                        }
+
                                                     </code>
                                                 </pre>
                                                 </div>
