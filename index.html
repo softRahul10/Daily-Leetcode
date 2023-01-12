@@ -3193,6 +3193,28 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+
+                                                    /*
+                                                        I/P : 4
+                                                        O/P : 4 3 2 1
+
+                                                        I/P : 6
+                                                        O/P : 6 5 4 3 2 1 
+                                                    */
+
+                                                    void print(int n) {
+
+                                                        if(n == 0) {
+                                                            return; // This is Base case
+                                                        }
+
+                                                        System.out.println(n);
+
+                                                        print(n-1); // Tail Call Elimination
+
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
