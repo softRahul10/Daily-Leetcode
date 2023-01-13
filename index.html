@@ -3327,7 +3327,31 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    /*
+                                                        I/P : 9
+                                                        O/P : yes
+
+                                                        I/P : 737
+                                                        O/P : yes
+
+                                                        I/P : 1000
+                                                        O/P : false
+                                                    */
+
+                                                    boolean isPalindrome(int n) {
+                                                        int reverseNumber = 0;
+                                                        int temp = n;
+
+                                                        while(temp != 0) {
+                                                            int lastDigit = temp % 10; // Getting : Last Digit of number
+                                                            reverseNumber = reverseNumber * 10 + lastDigit;
+                                                            temp = temp / 10; // Removing: Last Digit from number
+                                                        }
+
+                                                        return reverseNumber == n;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
