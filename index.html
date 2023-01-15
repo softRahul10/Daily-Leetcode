@@ -3680,7 +3680,18 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                        /*
+                                                            I/P : 5
+                                                            O/P : 1 2 3 4 5
+                                                        */
+
+                                                        void print(int n) {
+                                                            if(n == 0) {
+                                                                return;
+                                                            }
+                                                            print(n-1);
+                                                            System.out.println(n);
+                                                        }
                                                     </code>
                                                 </pre>
                                                 </div>
