@@ -3899,6 +3899,32 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    class Solution {
+                                                        public int[] pivotArray(int[] nums, int pivot) {
+                                                            int[] temp = new int[nums.length];
+                                                            int pos = 0;
+                                                            for(int i = 0; i < nums.length; i++) {
+                                                                if(nums[i] < pivot) {
+                                                                    temp[pos] = nums[i];
+                                                                    pos++;
+                                                                }
+                                                            }
+                                                            for(int i = 0; i < nums.length; i++) {
+                                                                if(nums[i] == pivot) {
+                                                                    temp[pos] = nums[i];
+                                                                    pos++;
+                                                                }
+                                                            }
+                                                            for(int i = 0; i < nums.length; i++) {
+                                                                if(nums[i] > pivot) {
+                                                                    temp[pos] = nums[i];
+                                                                    pos++;
+                                                                }
+                                                            }
+                                                            return temp;
+                                                        }
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
