@@ -176,8 +176,10 @@ const tallyContainer = document.querySelector(".tally-parent");
 const section = new DocumentFragment();
 
 tallyArray.forEach((tally, idx) => {
-  const view = createTally(tally.name, tally.id, tally.value,idx);
-  section.append(view);
+  if(tally.value !== 0) {
+    const view = createTally(tally.name, tally.id, tally.value,idx);
+    section.append(view);
+  }
 });
 
 tallyContainer.append(section);
