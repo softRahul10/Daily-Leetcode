@@ -4025,7 +4025,32 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    void lomutoPartition(int[] arr, int l, int h) {
+
+                                                        int pivot = arr[h]; // Last value is Pivot
+                                                        int i = l - 1;
+
+                                                        for(int j = l; j <= h - 1; j++) {
+                                                            if(arr[j] < pivot) {
+                                                                i++;
+                                                                swap(arr,i,j);
+                                                            }
+                                                        }
+
+                                                        swap(arr,i+1,h);
+                                                        return i;
+
+                                                    }
+
+                                                    // Swap Method for Lomuto Partition
+                                                    
+                                                    void swap(int[] arr, int i, int j) {
+                                                        int temp = arr[i];
+                                                        arr[i] = arr[j];
+                                                        arr[j] = temp;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
