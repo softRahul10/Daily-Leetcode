@@ -4083,7 +4083,33 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    void hoarePartition(int[] arr, int l, int h) {
+                                                        int pivot = arr[l]; // First element is pivot
+                                                        int i = l - 1;
+                                                        int j = h + 1;
+
+                                                        while(true) {
+                                                            do{
+                                                                i++;
+                                                            }while(arr[i] < pivot);
+
+                                                            do{
+                                                                j--;
+                                                            }while(arr[j] > pivot);
+
+                                                            if(i >= j) return j;
+                                                            swap(arr, i, j);
+                                                        }
+                                                    }
+
+                                                    void swap(int[] array, int idx1, int idx2) {
+                                                        int temp = array[idx1];
+                                                        array[idx1] = array[idx2];
+                                                        array[idx2] = temp;
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
