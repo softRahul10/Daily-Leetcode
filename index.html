@@ -3957,7 +3957,42 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    /*
+                                                        I/P : arr = [2,4,1,6], p = 1 (pivot index)
+                                                    */
+
+                                                    void partition(int[] arr, int p, int l, int h) {
+                                                       
+                                                        int[] temp = new int[arr.length];
+                                                        int pos = 0;
+
+                                                        for(int i = l; i <= h; i++) {
+                                                            if(arr[i] < arr[p]) {
+                                                                temp[pos] = arr[i];
+                                                                pos++;
+                                                            }
+                                                        }
+
+                                                        for(int i = l; i <= h; i++) {
+                                                            if(arr[i] == arr[p]) {
+                                                                temp[pos] = arr[i];
+                                                                pos++;
+                                                            }
+                                                        }
+
+                                                        for(int i = l; i <= h; i++) {
+                                                            if(arr[i] > arr[p]) {
+                                                                temp[pos] = arr[i];
+                                                                pos++;
+                                                            }
+                                                        }
+
+                                                        for(int i=0; i < temp.length; i++) {
+                                                            arr[i] = temp[i];
+                                                        }
+
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
