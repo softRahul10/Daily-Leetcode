@@ -4143,10 +4143,54 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+                                                        I/P : [3,2,1,4]
+                                                        O/P : [1,2,3,4]
+                                                    */
+
+                                                    void quickSort(int[] arr, int l, int h) {
+
+                                                        if(l < h) { // This line is assuring that 
+                                                                    //we have atleast 2 elements for sorting
+                                                                
+                                                            int p = partition(arr,l,h); 
+                                                            quickSort(arr,l,p-1);
+                                                            quickSort(arr,p+1,h);       
+
+                                                        }
+
+                                                    }
+
+                                                    // Partition method for sort function
+
+                                                    int partition(int[] array, int l, int h) {
+
+                                                        int pivot = array[h];
+                                                        int i = l - 1;
+
+                                                        for(int j = l; j <= h-1; j++) {
+                                                            if(array[j] < pivot) {
+                                                                i++;
+                                                                swap(array,i,j);
+                                                            }
+                                                        }
+
+                                                        swap(array,i+1,h);
+
+                                                        return i;
+
+                                                    }
+
+                                                    void swap(int[] arr, int x, int y) {
+                                                        int temp = arr[x];
+                                                        arr[x] = arr[y];
+                                                        arr[y] = temp;
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
-                                                
+
                                             </div>
                                         </div></div>
                             <!-- Question -->
