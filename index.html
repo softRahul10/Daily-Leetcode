@@ -4486,6 +4486,42 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+                                                    I/P :
+                                                               10
+                                                            20    30
+
+                                                    O/P : 10 20 30
+
+                                                    */ 
+
+                                                    // Node representation
+                                                    class Node {
+
+                                                       int key;
+                                                       Node left;
+                                                       Node right;
+                                                       
+                                                       public Node(int key) {
+                                                          this.key = key;
+                                                       }
+
+                                                    }
+
+                                                    void inOrder(Node root) {
+
+                                                        if(root != null) {
+
+                                                            System.out.print(root.key);
+                                                            inOrder(root.left);
+                                                            inOrder(root.right);
+
+                                                        }
+
+                                                    }
+                                                    
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
