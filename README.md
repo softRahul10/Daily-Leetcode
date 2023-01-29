@@ -26,6 +26,9 @@
 
 
 ### Mobile View
+![1](https://user-images.githubusercontent.com/116769878/215279578-5f4f0012-48c7-4980-84dd-dddc0f10c0a4.jpg)
+
+
 
 
 
