@@ -4757,6 +4757,44 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+
+                                                        /*
+                                                            I/P : [3,3,3,3,1,2,2,0,0,0,0,0], k = 4 (0-3 values range) 
+                                                            O/P : [0,0,0,0,0,1,2,2,3,3,3,3]
+                                                        */
+
+                                                        void sort(int[] arr,int k) {
+
+                                                            // Step1: Create a new array of size k 
+                                                            int[] count = new int[k];
+
+                                                            // Step2: Create a new array of size n 
+                                                            int[] output = new int[arr.length];
+
+                                                            // Step3: Count Numbers
+                                                            for(int value: arr) {
+                                                                count[value]++;
+                                                            }
+
+                                                            // Step4: Do Sum 
+                                                            for(int i=1; i < count.length; i++) {
+                                                                count[i] = count[i-1] + count[i];
+                                                            }
+
+                                                            // Step5: Fill output Array
+                                                            for(int i=0; i < arr.length; i++) {
+                                                                 output[count[arr[i]]-1] = arr[i];
+                                                                 count[arr[i]]--;
+                                                            }
+
+                                                            // Step6: Fill sorted array in original array
+                                                            for(int i=0; i < output.length; i++) {
+                                                                arr[i] = output[i];
+                                                            }
+
+                                                        }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
