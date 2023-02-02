@@ -5095,7 +5095,61 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    
+                                                    /*
+                                                         I/P : [320,210,9,8,12,10]
+                                                         O/P : [8,9,10,12,210,320]
+                                                    */
+
+                                                    void radixSort(int[] array) {
+
+                                                        // Step1: Find Max Number
+                                                        int max = array[0];
+
+                                                        for(int i=1; i < array.length; i++) {
+                                                            if(array[i] > max) {
+
+                                                                max = array[i];
+
+                                                            }
+                                                        }
+
+                                                        // Step2: Run a loop number of Digit times 
+                                                        for(int digit=1; (max/digit) > 0; digit = digit*10) {
+
+                                                            countingSort(array,digit);
+
+                                                        }
+
+                                                    }
+
+
+                                                    void countingSort(int[] array, int digit) {
+
+                                                        int[] count = new int[10];
+                                                        int[] res = new int[array.length];
+
+                                                        for(int i=0; i < array.length; i++) {
+                                                            count[(array[i]/digit)%10]++;
+                                                        }
+
+                                                        for(int i=1; i < count.length; i++) {
+                                                            count[i] = count[i-1] + count[i];
+                                                        }
+
+                                                        for(int i=array.length-1; i >= 0; i--) {
+                                                            res[count[(array[i]/digit)%10]] = array[i];
+                                                            count[(array[i]/digit)%10]--;
+                                                        }
+
+                                                        for(int i=0; i < res.length; i++) {
+                                                            array[i] = res[i];
+                                                        }
+
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
