@@ -5400,6 +5400,16 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    int heightOfTree(Node root) {
+
+                                                        if(root == null) { 
+                                                            return 0;
+                                                        }
+
+                                                        return Math.max(heightOfTree(root.left), heightOfTree(root.right))+1;
+
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
