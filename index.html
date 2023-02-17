@@ -5594,6 +5594,27 @@
                     <div class="leetcode-solution">
                     <pre>                        <code class="language-java">
                       
+                        /*
+
+                            I/P : 12
+                            O/P : 3
+
+                            I/P : 9821
+                            O/P : 20
+                        
+                        */
+
+                        int sumOfDigits(int n) {
+
+                            if(n == 0) {
+                                return 0;
+                            }
+
+                            return n % 10 + sumOfDigits(n/10);
+
+                        }
+
+
                         </code>
                     </pre>
                     </div>
