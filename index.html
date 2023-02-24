@@ -5899,8 +5899,46 @@
                                             </div>
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
-                                                <pre>                        <code class="language-java">
-                                                  
+
+                                                <pre>
+                                                                            <code class="language-java">
+                                                    /*
+                                                        You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+
+                                                        You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. 
+                                                        DO NOT allocate another 2D matrix and do the rotation.
+                                                    
+                                                     
+                                                    */
+
+                                                    class Solution {
+                                                        public void rotate(int[][] matrix) {
+
+                                                            // Transpose 
+                                                            for(int i=0; i < matrix.length; i++) {
+                                                                for(int j=i+1; j < matrix.length; j++) {
+                                                                    int temp = matrix[i][j];
+                                                                    matrix[i][j] = matrix[j][i];
+                                                                    matrix[j][i] = temp;
+                                                                }
+                                                            }
+                                                            
+                                                            // Reverses
+                                                            for(int i=0; i < matrix.length; i++) {
+                                                                int p1 = 0;
+                                                                int p2 = matrix.length - 1;
+                                                                while(p1  < p2) {
+                                                                    int temp = matrix[i][p1];
+                                                                    matrix[i][p1] = matrix[i][p2];
+                                                                    matrix[i][p2] = temp;
+                                                                    p1++;
+                                                                    p2--;
+                                                                }
+                                                            }
+
+                                                        }
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
