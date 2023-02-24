@@ -6008,7 +6008,7 @@
                                         <i class="fa-solid fa-clock"></i> <span class="time">25/02/2023</span>
                                         </div>
                                         <div class="leetcode-title">
-                                            <h3>Q92. Level Order Traversal of a Binary Tree </h3>
+                                            <h3>Q92. Level Order Traversal-I of a Binary Tree </h3>
                                             <button class="leetcode-level medium">medium</button>
                                         </div>
                                         <div class="leetcode-body">
@@ -6021,6 +6021,39 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+
+                                                    /*
+                                                        I/P : 
+                                                                1
+
+                                                            10      20
+
+                                                          2    3   4   5  
+
+                                                        O/P : [1,10,20,2,3,4,5]  
+                                                    */
+
+                                                    public static void levelOrder(Node root) {
+
+                                                        if(root == null) return;
+                                                        
+                                                        // Create a Queue
+                                                        Queue < Node > q = new LinkedList<>();
+                                                        q.add(root);
+
+                                                        while(!q.isEmpty()) {
+                                                            Node temp = q.poll();
+                                                            System.out.print(" " + temp.key + " ");
+                                                            if(temp.left != null) {
+                                                                q.add(temp.left);
+                                                            }
+                                                            if(temp.right != null) {
+                                                                q.add(temp.right);
+                                                            }
+                                                        }
+                                                }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
