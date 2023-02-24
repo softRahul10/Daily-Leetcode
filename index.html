@@ -5845,6 +5845,28 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    class Solution {
+                                                        public List&lt;Integer&gt; rightSideView(TreeNode root) {
+                                                            List&lt;Integer&gt; list = new ArrayList<>();
+                                                            Queue&lt;TreeNode&gt; q = new LinkedList&lt;TreeNode&gt;();
+                                                            if(root == null) return list;
+                                                            q.add(root);
+                                                    
+                                                            while(!q.isEmpty()) {
+                                                                int size = q.size();
+                                                                for(int i=1; i <= size; i++) {
+                                                                    TreeNode temp = q.poll();
+                                                                    if(i == size) list.add(temp.val);
+                                                                    if(temp.left != null) q.add(temp.left);
+                                                                    if(temp.right != null) q.add(temp.right);
+                                                                }
+                                                            }
+                                                    
+                                                            return list;
+                                                        }
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
