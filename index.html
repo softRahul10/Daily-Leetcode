@@ -5760,7 +5760,57 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    /*
+                                                        Q. Given a Binary tree, determine if it is a height Balanced
+
+                                                        Height Balanced = "A height-balanced binary tree is a binary 
+                                                        tree in which the depth of the two subtrees of every node never
+                                                        differs by more than one."
+
+                                                    */
+
+                                                    /**
+                                                        * Definition for a binary tree node.
+                                                        * public class TreeNode {
+                                                        *     int val;
+                                                        *     TreeNode left;
+                                                        *     TreeNode right;
+                                                        *     TreeNode() {}
+                                                        *     TreeNode(int val) { this.val = val; }
+                                                        *     TreeNode(int val, TreeNode left, TreeNode right) {
+                                                        *         this.val = val;
+                                                        *         this.left = left;
+                                                        *         this.right = right;
+                                                        *     }
+                                                        * }
+                                                        */
+                                                        
+                                                        class Solution {
+                                                            public boolean isBalanced(TreeNode root) {
+                                                                return getHeight(root) == -1 ? false: true;
+                                                            }
+                                                            public int getHeight(TreeNode root) {
+                                                                if(root == null) return 0;
+                                                                int leftHeight = getHeight(root.left);
+                                                                if(leftHeight == -1) {
+                                                                    return -1;
+                                                                }
+                                                                int rightHeight = getHeight(root.right);
+                                                                if(rightHeight == -1) {
+                                                                    return -1;
+                                                                }
+
+                                                                int diff = Math.abs(leftHeight - rightHeight);
+                                                                if(diff > 1) {
+                                                                    return -1;
+                                                                }
+                                                                return Math.max(leftHeight,rightHeight)+1;
+                                                            }
+                                                        }
+
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
