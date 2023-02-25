@@ -6189,6 +6189,31 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+
+                                                        I/P : null
+                                                        O/P : 0
+
+                                                        I/P : 1
+                                                        O/P : 1
+
+                                                        I/P : 
+                                                                1
+                                                              2   3
+                                                             4 5 6 7
+
+                                                        O/P : 7
+                                                    
+                                                    */
+
+                                                    int sizeOfTree(Node root) {
+
+                                                        if(root == null) return 0;
+
+                                                        return sizeOfTree(root.left) + sizeOfTree(root.right) + 1;
+
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
