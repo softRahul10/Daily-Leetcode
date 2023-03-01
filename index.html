@@ -6247,7 +6247,36 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    class Solution {
+                                                        public List&lt;List&lt;Integer>> levelOrderBottom(TreeNode root) {
+
+                                                            List&lt;List&lt;Integer>> result = new LinkedList&lt;List&lt;Integer>>();
+                                                            if(root == null) return result;
+                                                    
+                                                            Queue&lt;TreeNode> q = new LinkedList<>();
+                                                            q.offer(root);
+
+                                                            while(q.isEmpty() == false) {
+
+                                                                int size = q.size();
+                                                                List&lt;Integer> subResult = new ArrayList<>();
+                                                                for(int i=1; i <= size; i++) {
+                                                                    TreeNode temp = q.poll();
+                                                                    subResult.add(temp.val);
+                                                                    if(temp.left != null) q.offer(temp.left);
+                                                                    if(temp.right != null) q.offer(temp.right);
+                                                                }
+                                                                result.add(0,subResult);
+
+                                                            }
+
+                                                            return result;
+                                                            
+                                                        }
+                                                    }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
