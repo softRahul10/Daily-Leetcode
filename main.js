@@ -30,7 +30,7 @@ function updateProgress() {
     const ele = document.querySelector(".bar");
     const numberOfQuestions = document.querySelector(
         ".leetcode-questions"
-    ).childElementCount;
+    ).childElementCount - 1;
     const questionUI = document.querySelector("#numberOfSolvedQuestions");
     const targetUI = document.querySelector("#targetQuestion");
 
