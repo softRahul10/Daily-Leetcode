@@ -6457,7 +6457,24 @@
                                             <div class="leetcode-body-content" id="hidden" style="display:none;">
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
-                                                  
+                                                    
+                                                    public static int distinctElements(int[] a, int[] b) {
+
+                                                        HashSet&lt;Integer> unique = new HashSet<>();
+                                                
+                                                        for(int ele:a) {
+                                                            unique.add(ele);
+                                                        }
+                                                
+                                                        for(int ele:b) {
+                                                           unique.add(ele);
+                                                        }
+
+                                                        return unique.size();
+                                                        
+                                                    }
+                                            
+
                                                     </code>
                                                 </pre>
                                                 </div>
