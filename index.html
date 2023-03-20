@@ -6581,6 +6581,28 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+                                                    Example 1:
+
+                                                    Input : 122
+                                                    Output: 221
+                                                    Explanation: By reversing the digits of 
+                                                    number, number will change into 221.
+                                                    */
+
+                                                    public long reverse_digit(long n)
+                                                    {
+                                                        // Code here
+                                                        long result = 0;
+                                                        while(n != 0) {
+                                                            byte lastDigit =(byte)(n % 10);
+                                                            result = result * 10 + lastDigit;
+                                                            n = n/10;
+                                                        }
+                                                        return result;
+                                                        
+                                                    }
+
                                                     </code>
                                                 </pre>
                                                 </div>
