@@ -205,7 +205,9 @@ function createQuestionUI() {
     const time = new Date().toTimeString();
 
     const container = document.querySelector(".leetcode-questions");
-    const numberOfQuestion = container.childElementCount + 1;
+    const numberOfQuestion = container.querySelectorAll('.leetcode').length + 1;
+    
+    //const numberOfQuestion = container.childElementCount + 1;
 
     // Question : Input
     const questionTitle = prompt("Enter Question:");
