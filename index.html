@@ -6640,6 +6640,41 @@
                                                 <div class="leetcode-solution">
                                                 <pre>                        <code class="language-java">
                                                   
+                                                    /*
+                                                            Input:
+                                                            5
+                                                            4 2 -3 1 6
+                                                            
+                                                            Output: 
+                                                            Yes
+                                                            
+                                                            Explanation: 
+                                                            2, -3, 1 is the subarray 
+                                                            with sum 0.
+                                                    */
+
+                                                    boolean findsum(int arr[],int n) {
+
+                                                    HashSet&lt;Integer&gt; hs = new HashSet<>();
+                                                    int previousSum = 0;
+                                                    
+                                                    for(int i=0; i < n; i++) {
+
+                                                        previousSum += arr[i];
+                                                        if(hs.contains(previousSum)) {
+                                                            return true;
+                                                        }
+                                                        if(previousSum == 0) {
+                                                            return true;
+                                                        }
+                                                        hs.add(previousSum);
+
+                                                    }
+
+                                                    return false;
+                                                }
+
+
                                                     </code>
                                                 </pre>
                                                 </div>
