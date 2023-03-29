@@ -45,13 +45,13 @@ img {
 .leetcode-search {
   padding: 1rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   background: #000;
   color: #fff;
   margin: 0.5rem 1rem;
+  gap: 2rem;
 }
 
 .leetcode-search #topic {
