@@ -452,10 +452,10 @@ div.progress-bar {
   background: #000000b0;
   color: #fff;
   padding: 1rem 1rem 4rem;
+  text-align: center;
 }
 
 .quick-title {
-  text-align: center;
   padding: 1rem 0.5rem;
 }
 .quick-list {
@@ -464,10 +464,20 @@ div.progress-bar {
   text-transform: capitalize;
   text-overflow: ellipsis;
 }
-.quick-content{
+.quick-content {
   max-width: 800px;
-  margin:auto;
+  margin: auto;
+}
+.quick-content ol {
+  list-style: none;
+  padding: 0.5rem;
 }
 .quick-list a {
-  color:#f89f1b;
+  transition: color 0.5s ease;
+  color: #f89f1b;
+}
+.quick-list a:hover,
+.quick-list a:active {
+  color: #fff;
+  text-decoration: none;
 }
