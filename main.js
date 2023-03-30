@@ -43,6 +43,9 @@ function updateProgress() {
 
     // Update Level wise data alos
     updateLevel();
+
+    // Create Quick link
+    generateQuickLink();
 }
 
 updateProgress();
@@ -255,3 +258,47 @@ function createQuestionUI() {
             </div>`;
     container.append(questionUI);
 }
+
+
+
+/* Dynamically adding Id and generation quick link for 
+    Every question
+*/
+
+function generateQuickLink() {
+
+    const question = document.querySelectorAll('.leetcode .leetcode-title h3');
+    const quickContainer = document.querySelector('.quick-content__container');
+
+    //1. add id to every question title
+    function addQuestionId() {
+        for(let i = 0; i < question.length; i++) {
+            question[i].id = i;
+        }
+    }
+
+    //2. create dynamic quick link
+    function createQuickLink(id,title) {
+        const ele = document.createElement('li');
+        ele.classList.add('quick-list');
+        ele.innerHTML = `
+            <a href="#${id}" title="${title}"> ${title} </a>
+        `;
+        return ele;
+    }
+    addQuestionId();
+    for(let i = 0; i < question.length; i++) {
+        let temp = createQuickLink(question[i].id,question[i].innerHTML);
+        quickContainer.appendChild(temp);
+    }
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        let tag = this.getAttribute('href').slice(1);
+        document.getElementById(tag).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
