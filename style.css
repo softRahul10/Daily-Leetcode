@@ -25,16 +25,16 @@ img {
 }
 
 /* footer data */
-.footer-info{
+.footer-info {
   padding: 3rem 1rem;
 }
-.footer-info table{
+.footer-info table {
   margin: 1rem auto;
 }
-.footer-info th{
+.footer-info th {
   text-align: left;
 }
-.footer-info td{
+.footer-info td {
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;
   border-radius: 1rem;
@@ -67,8 +67,8 @@ img {
   text-align: center;
 }
 
-@media screen and (max-width:600px) {
-  .leetcode-search{
+@media screen and (max-width: 600px) {
+  .leetcode-search {
     font-size: 1rem;
     text-align: center;
   }
@@ -439,11 +439,35 @@ div.progress-bar {
   }
 }
 
-
 /* Leetcode Celebration */
 .leetcode-celebration {
   background-color: #000;
   padding: 0.5rem;
   text-align: center;
   color: #fff;
+}
+
+/* Quick Question */
+.quick {
+  background: #000000b0;
+  color: #fff;
+  padding: 1rem 1rem 4rem;
+}
+
+.quick-title {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+.quick-list {
+  padding: 0.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+}
+.quick-content{
+  max-width: 800px;
+  margin:auto;
+}
+.quick-list a {
+  color:#f89f1b;
 }
